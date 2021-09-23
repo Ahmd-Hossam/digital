@@ -1,0 +1,14 @@
+.page-title {
+    color: $midnight_express_color;
+    font-size: 1.5625rem;
+    font-weight: bold;
+    margin: 0;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    span {
+        margin-inline-start: 10px;
+        font-size: 11px;
+        padding: 6px;
+    }
+}

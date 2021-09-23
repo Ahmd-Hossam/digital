@@ -1,0 +1,57 @@
+<!-- Start Sidemenu Area -->
+<div class="sidemenu-area">
+  <div class="sidemenu-header">
+    <a routerLink="/home" class="navbar-brand d-flex align-items-center">
+      <img class="sidebar-logo" src="assets/img/logo_white.png" alt="image">
+    </a>
+
+    <div class="burger-menu d-none d-lg-block">
+      <span class="top-bar"></span>
+      <span class="middle-bar"></span>
+      <span class="bottom-bar"></span>
+    </div>
+
+    <div class="responsive-burger-menu d-block d-lg-none">
+      <span class="top-bar"></span>
+      <span class="middle-bar"></span>
+      <span class="bottom-bar"></span>
+    </div>
+  </div>
+
+  <div class="sidemenu-body">
+    <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar >
+      <ul class="sidemenu-nav metisMenu h-100" *ngFor="let menu of menus | keyvalue">
+        <li class="nav-item-title">{{menu.key}}</li>
+        <li class="nav-item" *ngFor="let item of menu.value" routerLinkActive="active mm-active" [routerLinkActiveOptions]="{exact: true}" >
+          <a [routerLink]="item.routerLink" class="nav-link">
+            <span class="icon"><i [ngClass]="item.icon"></i></span>
+            <span class="menu-title">{{item.title}}</span>
+          </a>
+          <ul *ngIf="item.title == 'Test Centers' " class="sidemenu-nav-second-level">
+                    <li class="nav-item" routerLinkActive="active mm-active">
+                        <a routerLink="/test-centers/centers" class="nav-link">
+                            <span class="icon"><i class='bx bxs-inbox'></i></span>
+                            <span class="menu-title">Centers</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item" routerLinkActive="active mm-active">
+                        <a routerLink="/test-centers/applications" class="nav-link">
+                            <span class="icon"><i class='bx bxs-badge-check'></i></span>
+                            <span class="menu-title">Applications</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item" routerLinkActive="active mm-active">
+                        <a routerLink="/test-centers/map" class="nav-link">
+                            <span class="icon"><i class='bx bxs-map'></i></span>
+                            <span class="menu-title">Map</span>
+                        </a>
+                    </li>
+                </ul>
+        </li>
+      </ul>
+    </ul>
+  </div>
+</div>
+<!-- End Sidemenu Area -->

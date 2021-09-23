@@ -1,0 +1,220 @@
+/*================================================
+App Calendar CSS
+=================================================*/
+.calendar-container {
+    overflow: hidden;
+    box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+    border-radius: 5px;
+    background: $white-color;
+
+    .calendar {
+        display: grid;
+        width: 100%;
+        overflow: auto;
+        grid: {
+            template-columns: repeat(7, minmax(120px, 1fr));
+            template-rows: 50px;
+            auto-rows: 120px;
+        };
+    }
+    .calendar-header {
+        position: relative;
+        padding: 25px 20px;
+        border-bottom: 1px solid rgba(166, 168, 179, 0.12);
+        
+        h3 {
+            font: {
+                size: 18px;
+                weight: 700;
+            };
+        }
+        button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background-color: $main-color;
+            color: $white-color;
+            transition: $transition;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font: {
+                size: $font-size;
+                weight: 700;
+            };
+            &:hover {
+                background-color: $nero_color;
+                color: $white-color;
+            }
+        }
+    }
+    .day {
+        border-bottom: 1px solid rgba(166, 168, 179, 0.12);
+        border-right: 1px solid rgba(166, 168, 179, 0.12);
+        text-align: right;
+        padding: 14px 20px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        box-sizing: border-box;
+        color: #898989;
+        position: relative;
+        pointer-events: none;
+        z-index: 1;
+
+        &:nth-of-type(7n + 7) {
+            border-right: 0;
+        }
+        &:nth-of-type(n + 1):nth-of-type(-n + 7) {
+            grid-row: 2;
+        }
+        &:nth-of-type(n + 8):nth-of-type(-n + 14) {
+            grid-row: 3;
+        }
+        &:nth-of-type(n + 15):nth-of-type(-n + 21) {
+            grid-row: 4;
+        }
+        &:nth-of-type(n + 22):nth-of-type(-n + 28) {
+            grid-row: 5;
+        }
+        &:nth-of-type(n + 29):nth-of-type(-n + 35) {
+            grid-row: 6;
+        }
+        &:nth-of-type(7n + 1) {
+            grid-column: 1/1;
+        }
+        &:nth-of-type(7n + 2) {
+            grid-column: 2/2;
+        }
+        &:nth-of-type(7n + 3) {
+            grid-column: 3/3;
+        }
+        &:nth-of-type(7n + 4) {
+            grid-column: 4/4;
+        }
+        &:nth-of-type(7n + 5) {
+            grid-column: 5/5;
+        }
+        &:nth-of-type(7n + 6) {
+            grid-column: 6/6;
+        }
+        &:nth-of-type(7n + 7) {
+            grid-column: 7/7;
+        }
+    }
+    .day-name {
+        color: $nero_color;
+        border-bottom: 1px solid rgba(166, 168, 179, 0.12);
+        line-height: 50px;
+        text: {
+            transform: uppercase;
+            align: center;
+        };
+        font: {
+            size: 12px;
+            weight: 700;
+        };
+    }
+    .day--disabled {
+        background-color: $white-color;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f9f9fa' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+        cursor: not-allowed;
+    }
+    .task {
+        border-left-width: 3px;
+        padding: 8px 12px;
+        margin: 10px;
+        border-left-style: solid;
+        font-size: 14px;
+        position: relative;
+
+        &.task--warning {
+            border-left-color: #fdb44d;
+            grid-column: 4 / span 3;
+            grid-row: 3;
+            background: #fef0db;
+            align-self: center;
+            color: #fc9b10;
+            margin-top: -5px;
+        }
+        &.task--danger {
+            border-left-color: #fa607e;
+            grid-column: 2 / span 3;
+            grid-row: 3;
+            margin-top: 15px;
+            background: rgba(253, 197, 208, 0.7);
+            align-self: end;
+            color: #f8254e;
+        }
+        &.task--info {
+            border-left-color: #4786ff;
+            grid-column: 6 / span 2;
+            grid-row: 5;
+            margin-top: 15px;
+            background: rgba(218, 231, 255, 0.7);
+            align-self: end;
+            color: #0a5eff;
+        }
+        &.task--primary {
+            background: #4786ff;
+            border: 0;
+            border-radius: 4px;
+            grid-column: 3 / span 3;
+            grid-row: 4;
+            align-self: end;
+            color: #fff;
+            box-shadow: 0 10px 14px rgba(71, 134, 255, 0.4);
+        }
+        .task__detail {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 10px);
+            background: $white-color;
+            border: 1px solid rgba(166, 168, 179, 0.2);
+            color: #000000;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            z-index: 2;
+
+            &::after, &::before {
+                bottom: 100%;
+                left: 30%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+            &::before {
+                margin-left: -8px;
+                border: {
+                    bottom-color: rgba(166, 168, 179, 0.2);
+                    width: 8px;
+                };
+            }
+            &:after {
+                margin-left: -6px;
+                border: {
+                    bottom-color: $white-color;
+                    width: 6px;
+                };
+            }
+            h4 {
+                font-size: 15px;
+                margin: 0;
+                color: #51565d;
+            }
+            p {
+                margin-top: 4px;
+                margin-bottom: 0;
+                color: rgba(81, 86, 93, 0.7);
+                font: {
+                    weight: 500;
+                    size: 12px;
+                };
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.btn {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+
+    i.bx{
+        margin-inline-end: 10px;
+    }
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.action-btn {
+    visibility: hidden;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: $alice_blue_color;
+
+    &:hover {
+        background: rgb(242, 244, 245);
+    }
+
+    &:first-child {
+        margin-right: 10px;
+    }
+
+    i {
+        color: $black_color;
+    }
+}
+
+.btn-purple{
+    background: $rich_blue_color;
+    color:$white-color;
+    &:hover{
+        color:$light_white_smoke_color
+    }
+}
+
+.btn-main{
+    background: $main-color;
+    color:$white-color;
+    &:hover{
+        color:$white-color;
+    }
+}
+
+.btn-white{
+    background: $white-color;
+    color:$nero_color;
+    border:1px solid $nero_color;
+    &:hover{
+        background:$white-color;
+    }
+}
+
+
+.btn-normal{
+    background: $alice_blue_color;
+    color:$nero_color;
+    border:none;
+    &:hover{
+        background:$alice_blue_color;
+    }
+}
+
+

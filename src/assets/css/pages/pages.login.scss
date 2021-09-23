@@ -1,0 +1,215 @@
+/*================================================
+Login CSS
+=================================================*/
+.login-area {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background: #f6f7fb;
+    
+    &.bg-image {
+        background: {
+            image: url(/assets/img/login-bg.jpg);
+            position: center center;
+            size: cover;
+            repeat: no-repeat;
+        };
+    }
+    .d-table {
+        width: 100%;
+        height: 100%;
+
+        &-cell {
+            vertical-align: middle;
+        }
+    }
+    .login-form {
+        max-width: 480px;
+        background: $white-color;
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+        padding: 50px;
+        box-shadow: 1px 5px 24px 0 rgba(68,102,242,.05);
+        margin: {
+            left: auto;
+            right: auto;
+        };
+        h2 {
+            font: {
+                size: 30px;
+                weight: 700;
+            };
+            margin: {
+                top: 30px;
+                bottom: 0;
+            };
+        }
+        form {
+            margin-top: 25px;
+
+            .form-group {
+                margin-bottom: 30px;
+                width: 100%;
+                position: relative;
+
+                .label-title {
+                    margin-bottom: 0;
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    pointer-events: none;
+                    width: 100%;
+                    height: 100%;
+                    color: $nero_color;
+
+                    i {
+                        position: absolute;
+                        left: 0;
+                        transition: $transition;
+                        top: 9px;
+                        font: {
+                            size: 22px;
+                        };
+                    }
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        transition: $transition;
+                        background: $main-color;
+                    }
+                }
+                .form-control {
+                    border-radius: 0;
+                    border: none;
+                    border-bottom: 2px solid #adadad;
+                    padding: 0 0 0 32px;
+                    color: $nero_color;
+                    height: 45px;
+                    transition: $transition;
+                    font: {
+                        family: $font-family;
+                        size: 17px;
+                        weight: 500;
+                    };
+                    &::placeholder {
+                        color: #A1A1A1;
+                        transition: $transition;
+                    }
+                    &:focus {
+                        padding-left: 5px;
+                        
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                    &:focus+.label-title::before {
+                        width: 100%;
+                    }
+                    &:focus+.label-title {
+                        color: #A1A1A1;
+
+                        i {
+                            top: -22px;
+                        }
+                    }
+                }
+                .remember-forgot {
+                    text-align: left;
+                    position: relative;
+                    overflow: hidden;
+
+                    .forgot-password {
+                        float: right;
+                        color: #0ca7ec;
+                        text-decoration: none !important;
+                    }
+                }
+                .checkbox-box {
+                    margin-bottom: 0;
+                    cursor: pointer;
+                    user-select: none;
+                    padding-left: 25px;
+                    color: #6c757d;
+
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+
+                        &:checked ~ .checkmark {
+                            background-color: #2196F3;
+                        }
+                        &:checked ~ .checkmark:after {
+                            display: block;
+                        }
+                    }
+                    .checkmark {
+                        position: absolute;
+                        top: 1px;
+                        left: 0;
+                        height: 18px;
+                        width: 18px;
+                        overflow: hidden;
+                        background-color: #eeeeee;
+                        transition: $transition;
+
+                        &:after {
+                            content: "\e9f0";
+                            position: absolute;
+                            display: none;
+                            left: 0;
+                            top: -4.5px;
+                            color: $white-color;
+                            font: {
+                                family: 'boxicons'!important;
+                                weight: normal;
+                                style: normal;
+                                size: 17px;
+                                variant: normal;
+                            };
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $nero_color;
+                    }
+                }
+            }
+            .login-btn {
+                padding: 12px 35px 11px;
+                border-radius: 30px;
+                border: none;
+                text-transform: uppercase;
+                transition: $transition;
+                background-color: $main-color;
+                color: $white-color;
+                font: {
+                    size: $font-size;
+                    weight: 700;
+                };
+                &:hover, &:focus {
+                    background-color: $nero_color;
+                    color: $white-color;
+                }
+            }
+            p {
+                margin-top: 20px;
+                color: #6c757d;
+
+                a {
+                    text-decoration: none !important;
+                    color: #0ca7ec;
+                }
+            }
+        }
+    }
+}

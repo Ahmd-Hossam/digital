@@ -1,0 +1,187 @@
+<!-- 
+  <app-toast></app-toast>
+-->
+<div class="d-flex flex-wrap justify-content-between content">
+  <div class="form">
+    <div class="logo">
+      <img src="../../../../assets/img/logo.png" />
+      <img src="../../../../assets/img/title.png" />
+    </div>
+    <div class="login">Log In</div>
+    <div class="info">
+      Enter your emaill and password to access to home.
+    </div>
+    <form>
+      <div *ngIf="mode == modes.username">
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input
+            [(ngModel)]="formData.userName"
+            name="userName"
+            #userName="ngModel"
+            required
+            placeholder="Email Address"
+            type="text"
+            class="form-input"
+            [ngClass]="{
+              'border border-danger':
+                userName.invalid && (userName.dirty || userName.touched)
+            }"
+          />
+        </div>
+        <div
+          *ngIf="userName.invalid && (userName.dirty || userName.touched)"
+          class="text-danger pb-2"
+        >
+          <div *ngIf="userName.errors.required">Username is required</div>
+        </div>
+        <button class="w-100 btn btn-primary p-2" (click)="validateUsername()">
+          Next
+        </button>
+      </div>
+      <div *ngIf="mode == modes.password">
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input
+            [(ngModel)]="formData.password"
+            placeholder="Password"
+            required
+            type="password"
+            class="form-input"
+            [ngClass]="{
+              'border border-danger':
+                password.invalid && (password.dirty || password.touched)
+            }"
+            name="password"
+            #password="ngModel"
+          />
+        </div>
+        <div
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="text-danger pb-1"
+        >
+          <div *ngIf="password.errors.required">Password is required</div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between remeber-me">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="checkbox-id" />
+            <label class="form-check-label" for="checkbox-id"
+              >Remember me</label
+            >
+          </div>
+          <a routerLink="/login/password-reset" class="forget-password"
+            >Forgot Password?</a
+          >
+        </div>
+        <button class="w-100 btn btn-primary p-2" (click)="authenticate()">
+          Log In
+        </button>
+      </div>
+      <div *ngIf="mode == modes.setPassword">
+        <div class="form-group">
+          <label class="form-label">OTP</label>
+          <input
+            [(ngModel)]="formData.otp"
+            name="otp"
+            #otp="ngModel"
+            required
+            placeholder="Otp"
+            type="pass"
+            class="form-input"
+            [ngClass]="{
+              'border border-danger':
+                otp.invalid && (otp.dirty || otp.touched)
+            }"
+          />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input
+            [(ngModel)]="passwordSet"
+            placeholder="Password"
+            required
+            type="password"
+            class="form-input"
+            [ngClass]="{
+              'border border-danger':
+              passwordSet.invalid && (passwordSet.dirty || passwordSet.touched)
+            }"
+            name="passwordSet"
+            #password="ngModel"
+          />
+        </div>
+        <button class="w-100 btn btn-primary p-2" (click)="setPassword()">
+          Set Password
+        </button>
+      </div>
+      <div class="">
+        <h2><span>OR</span></h2>
+        <button class="w-100 btn btn-outline-primary p-2">
+          Register as CAB
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="right-side">
+    <div class="img">
+      <div class="wrapper">
+        <div
+          id="carouselIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-img-container">
+                <img
+                  class="carousel-img"
+                  src="../../../../assets/img/Keep track of student progress.png"
+                />
+              </div>
+              <div class="title">Manage & Review applicants results</div>
+              <div class="data">
+                In nunc aliquam, vestibulum amet, consequat sed. Vestibulum amet
+                mauris quis et ac, donec vitae. Parturient in ullamcorper.
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-img-container">
+                <img
+                  class="carousel-img"
+                  src="../../../../assets/img/Keep track of student progress.png"
+                />
+              </div>
+              <div class="title">Manage & Review applicants results</div>
+              <div class="data">
+                In nunc aliquam, vestibulum amet, consequat sed. Vestibulum amet
+                mauris quis et ac, donec vitae. Parturient in ullamcorper.
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-img-container">
+                <img
+                  class="carousel-img"
+                  src="../../../../assets/img/Keep track of student progress.png"
+                />
+              </div>
+              <div class="title">Manage & Review applicants results</div>
+              <div class="data">
+                In nunc aliquam, vestibulum amet, consequat sed. Vestibulum amet
+                mauris quis et ac, donec vitae. Parturient in ullamcorper.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

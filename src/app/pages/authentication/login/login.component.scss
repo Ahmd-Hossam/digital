@@ -1,0 +1,108 @@
+@import "../../../../assets/css/utils/variables.scss";
+
+.content {
+  height: 100vh;
+  .form {
+    width: 45%;
+    padding-left: 90px;
+    padding-right: 105px;
+    padding-top: 90px;
+    padding-bottom: 38px;
+    .login {
+      font-weight: bold;
+      font-size: 45px;
+      line-height: 56px;
+      letter-spacing: -0.02em;
+      color: $title_color;
+      padding-top: 40px;
+    }
+    .info {
+      padding-bottom: 25px;
+      padding-top: 5px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 23px;
+      letter-spacing: 0.02em;
+      color: $info_color;
+    }
+    .form-label {
+      color: $title_color;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    h2 {
+      font-size: 14px;
+      text-align: center;
+      border-bottom: 1px solid $periwinkle_gray_color;
+      font-weight: 600;
+      line-height: 0.1em;
+      margin: 33px 0 33px;
+    }
+
+    h2 span {
+      color: $periwinkle_gray_color;
+      background: $white-color;
+      padding: 0 20px;
+    }
+    .remeber-me {
+      padding-top: 7px;
+      padding-bottom: 25px;
+      .form-check-label {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $title_color;
+      }
+      .forget-password {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $main-color;
+      }
+    }
+  }
+  .right-side {
+    width: 55%;
+    .img {
+      background: url(../../../../assets/img/Inn.png),
+        linear-gradient($royal_blue_color 0%, $heliotrope_color 90%);
+      background-blend-mode: luminosity;
+      height: 100%;
+      .wrapper {
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(40px);
+        border-radius: 21px;
+        position: absolute;
+        padding: 70px 50px 110px;
+        margin: 65px 100px 0;
+        .carousel-indicators {
+          top: 340px;
+        }
+        .title {
+          font-weight: bold;
+          font-size: 35px;
+          line-height: 43px;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: $white-color;
+        }
+        .data {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 23px;
+          text-align: center;
+          letter-spacing: 0.06em;
+          color: $white-color;
+        }
+        .carousel-img-container {
+          text-align: center;
+          .carousel-img {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
