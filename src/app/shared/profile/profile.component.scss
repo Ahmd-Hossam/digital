@@ -1,0 +1,304 @@
+.main{
+    background: #eff8fd;
+    height: 5000px;
+    overflow: hidden;
+    .logo{
+        padding: 30.6px 157px 41px 158px;
+        img{
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+    }
+    .personalInfo{
+        background: url('../../../assets/img/profile/mask/Mask\ Group\ 43.jpg');
+        position: relative;
+        border-radius: 16px;
+        &::before{
+            background-color:#C2E3F2;
+            border-radius: 16px;
+            box-shadow: 0 15px 38px 0 rgba(0, 0, 0, 0.05);
+            //height: 283px;
+            opacity: .6;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+        .row{
+            padding:20px 20px 0 20px;
+        }
+        .person{
+            img{
+               margin-top:-60px;
+               margin-bottom: 15px;
+               border-radius: 13px;
+            }
+            small{
+                display: block;
+                margin:0;
+                padding: 0;
+                text-transform: capitalize;
+            }
+            h5{
+                margin:0;
+                padding: 0;
+                color: #3a4778;
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+             }
+        }
+        .weather{
+            small{
+                display: block;
+            }
+            .celsius{
+                font-weight: bold;
+            }
+        }
+        .meeting{
+            padding:25px 15px;
+            background: #e1f2fb;
+            border-radius: 15px;
+            margin:30px 0  20px 0 ;
+            .next{
+                .clock{
+                    height: 36px;
+                    margin: 4px 7px 0 0;
+                    img{
+                        height: 100%;
+                    }
+                }
+                .info{
+
+                }
+            }
+        }
+
+        .progress{
+            height: 50px;
+            margin-right: 10px;
+        }
+        .desktop{
+            width:100%;
+            height: 100%;
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+    }
+
+
+
+    //news 
+    .news{
+        .item{
+            align-items: center;
+            margin-bottom: 12px;
+            margin-top: 10px;
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: 0 15px 48px 0 rgba(0, 0, 0, 0.05);
+            background-color: #fff;
+            .title{
+                font-weight: bold;
+                color:#6372AC;
+                text-transform: capitalize;
+                i{
+                    font-size: 25px;
+                    position: relative;
+                    top:5px;
+                }
+            }
+            .count{
+                width: 40px;
+                height: 40px;
+                margin: 0 0 0 18px;
+                padding: 8px 8px 8px 9px;
+                background-color: #6372ac;
+                border-radius: 50%;
+                color:#fff;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+
+
+
+
+    /**********  Start Cards ***********************/
+    .cards{
+        margin-top: 30px;
+       .card{
+            border-radius: 16px;
+            min-height: 340px;
+            padding:25px 14px !important;
+            //card header
+            .cardHeader{
+                .title{
+                    font-weight: bold;
+                    color: #3a4778;
+                    font-size: 18px;
+                    margin-bottom: 0;
+                    i{
+                        position: relative;
+                        top:1px;
+                        right:2px;
+                    }
+                }
+                .shap{
+                    width:30px;
+                    height: 30px;
+                    background: #FFD8D8;
+                    color: red;
+                    border-radius: 50%;
+                    color:#fff;
+                    text-align: center;
+                    line-height: 30px;
+                }
+            }
+
+            //card body
+            .cardBody{
+                border-radius: 12px;
+                margin-top: 0;
+                .description{
+                    padding: 16px 7px 16px 7px;            
+                    margin: 10px 0 0;
+                    background-color: #f3f6ff;
+                    min-width: 222px;
+                    border-radius: 12px;
+                    .title{
+                        padding: 5px 6px;
+                        border-radius: 5px;
+                        color: #fff;
+                        background-color: #03a3ee;
+                    }
+                    .pragraph{
+                        display: block;
+                        font-size: 12px;
+                        font-style: none;
+                        padding:0;
+                        margin:0;
+                        font-weight: bold;
+                        color:#6372ac;
+                        &:first-of-type{
+                            margin-top: 12px !important;
+                        }
+                    }
+                    .time{
+                        text-align: center;
+                        font-weight: bold;
+                        color:#3a4778;
+                        margin:25px 0 35px 0;
+                    }
+                    .text{
+                        display: block;
+                        text-align: right;
+                        color:#6372ac;
+                        i{
+                            position: relative;
+                            top:5px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+                //times
+                .times{
+                    color: #7ab700;
+                    .time{
+                        margin-top: 10.8px;
+                        padding: 13px;
+                        border-radius: 12px;
+                        background-color: #f1f9e1;
+                    }
+                }
+                //progress circle
+                .circleProgress{
+                      padding-top:40px;  
+                }
+            }
+
+
+
+            //card footer
+            .cardFooter{
+                text-align: right;
+                position: absolute;
+                bottom:15px;
+                right: 20px;
+               .text{
+                   display: block;
+                   small{
+                       margin-right: 5px;
+                   }
+                   i{
+                    position: relative;
+                    top: 5px;
+                    width: 29px;
+                    height: 29px;
+                    padding-right: 3px;
+                    padding-top: 2px;
+                    margin: 0 0 0 17px;
+                    border-radius: 8px;
+                    margin-left: 5px;
+                    background-color: #f3f6fe;
+                   }
+               }
+            }
+       }
+
+
+       //for birthDays card only
+       .birthDays{
+           background:#3a4778 !important;
+            .cardHeader{
+                small{
+                    padding:0;
+                    margin:0;
+                    color:#fff;
+                }
+                .title{
+                    font-weight: bold;
+                    color: #fff;
+                    font-size: 18px;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    i{
+                        position: relative;
+                        top:1px;
+                        right:2px;
+                    }
+                }
+            }
+           .cardBody{
+
+            }
+           .cardFooter{
+            bottom: 0 !important;
+            left:20px
+           }
+       }
+
+    }
+
+    /********** start sideArrows ***************/
+    .sideArrows{
+      position: fixed;
+      top: 51px;
+      left: -98px;
+      width: 179.1px;
+      img{
+          width: 100%;
+          height: 100%;
+      }
+    }
+   
+}

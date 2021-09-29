@@ -17,8 +17,12 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
 import { FileComponent } from './components/file/file.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { StatusComponent } from './components/status/status.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
+// Import ng-circle-progress
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
   imports: [
@@ -36,7 +40,27 @@ import { StatusComponent } from './components/status/status.component';
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),
-    NgMultiSelectDropDownModule.forRoot()
+    NgMultiSelectDropDownModule.forRoot(),
+
+     // Specify ng-circle-progress as an import
+     NgCircleProgressModule.forRoot({
+      "radius": 60,
+      "space": -10,
+      "outerStrokeGradient": true,
+      "outerStrokeWidth": 10,
+      "outerStrokeColor": "#4882c2",
+      "outerStrokeGradientStopColor": "#53a9ff",
+      "innerStrokeColor": "#e7e8ea",
+      "innerStrokeWidth": 10,
+      "title": "UI",
+      //"imageWidth": "89",
+      "animateTitle": false,
+      "animationDuration": 1000,
+      "showUnits": false,
+      "showBackground": false,
+      "clockwise": false,
+      "startFromZero": false,
+      "lazy": true})
   ],
   exports: [
     FormsModule,
@@ -51,6 +75,7 @@ import { StatusComponent } from './components/status/status.component';
     FileComponent,
     TagsComponent,
     StatusComponent,
+    CommentComponent,
     ],
   declarations: [
     FormControlsComponent,
@@ -59,6 +84,8 @@ import { StatusComponent } from './components/status/status.component';
     FileComponent,
     TagsComponent,
     StatusComponent,
+    ProfileComponent,
+    CommentComponent,
   ],
 })
 export class SharedModule {}

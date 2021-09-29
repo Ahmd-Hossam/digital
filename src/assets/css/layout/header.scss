@@ -560,16 +560,15 @@ Top Navbar CSS
                         weight: 600;
                     };
                 }
-                img {
-                    width: 35px;
-                    height: 35px;
-                    display: inline-block;
-                    margin: {
-                        right: 0;
-                        left: 9px;
-                    };
+                img{
+                    width: 49px;
+                    height: 49px;
+                    margin: 0 16px 0 0;
+                    object-fit: contain;
+                    border-radius: 13px;
                 }
             }
+
             &.dropdown {
                 .dropdown-menu {
                     padding: 15px 15px 10px;
@@ -688,15 +687,15 @@ Top Navbar CSS
         &.is-sticky {
             position: fixed;
             top: 0;
-            left: 250px;
+            left: 0;
             z-index: 1000;
             box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.07);
             background: $white-color !important;
             animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-            width: calc(100% - 250px);
+            width:100% ;
             padding: {
                 left: 30px;
-                right: 30px;
+                right: 50px;
                 top: 17px;
                 bottom: 17px;
             };

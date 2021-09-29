@@ -19,7 +19,7 @@ export class SidebarComponent implements OnInit {
 
 
   ngOnInit() {
-    this.jqueryHandlers();
+    //this.jqueryHandlers();
     this.menus = this.sidebarService.buildMenu()
   }
 

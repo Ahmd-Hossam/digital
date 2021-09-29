@@ -1,0 +1,36 @@
+.birthDays{
+    background:#3a4778;
+    margin-top: 30px;
+    border-radius:16px;
+    padding:15px 0 0 15px;
+     .cardHeader{
+         small{
+             padding:0;
+             margin:0;
+             color:#fff;
+         }
+         .title{
+             font-weight: bold;
+             color: #fff;
+             font-size: 18px;
+             padding-bottom: 0;
+             margin-bottom: 0;
+             i{
+                 position: relative;
+                 top:1px;
+                 right:2px;
+             }
+         }
+     }
+    .cardBody{
+        .persons{
+            padding-top:20px;
+            padding-left:30px
+        }
+    }
+    .cardFooter{
+        
+        bottom: 0;
+        left:20px
+    }
+}

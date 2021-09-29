@@ -6,11 +6,10 @@ Sidemenu CSS
     left: 0;
     top: 0;
     height: 100%;
-    width: 250px;
+    width:70px;
     z-index: 2000;
     transition: $transition;
-    background: linear-gradient(353.39deg, #0E101A 58.56%, rgba(49, 51, 59, 0.853802) 139.63%, rgba(255, 255, 255, 0) 379.26%);
-
+    background:#fff;
     .sidemenu-header {
         padding: 0 20px;
         display: flex;
@@ -358,8 +357,8 @@ Sidemenu CSS
             }
         }
     }
-
-    &.toggle-sidemenu-area {
+    /*
+      &.toggle-sidemenu-area {
         width: 55px;
 
         .sidemenu-header {
@@ -470,6 +469,11 @@ Sidemenu CSS
             }
         }
     }
+
+
+    **/
+
+  
 }
 
 .navbar-brand-collapsed {

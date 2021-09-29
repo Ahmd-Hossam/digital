@@ -1,15 +1,10 @@
 <!-- Start Sidemenu Area -->
 <div class="sidemenu-area">
   <div class="sidemenu-header">
-    <a routerLink="/home" class="navbar-brand d-flex align-items-center">
-      <img class="sidebar-logo" src="assets/img/logo_white.png" alt="image">
+    <a routerLink="/home" class="">
+      <img class="sidebar-logo" src="../../../assets/img/logo/Mask Group 54.png" alt="image">
     </a>
 
-    <div class="burger-menu d-none d-lg-block">
-      <span class="top-bar"></span>
-      <span class="middle-bar"></span>
-      <span class="bottom-bar"></span>
-    </div>
 
     <div class="responsive-burger-menu d-block d-lg-none">
       <span class="top-bar"></span>
@@ -25,7 +20,7 @@
         <li class="nav-item" *ngFor="let item of menu.value" routerLinkActive="active mm-active" [routerLinkActiveOptions]="{exact: true}" >
           <a [routerLink]="item.routerLink" class="nav-link">
             <span class="icon"><i [ngClass]="item.icon"></i></span>
-            <span class="menu-title">{{item.title}}</span>
+           
           </a>
           <ul *ngIf="item.title == 'Test Centers' " class="sidemenu-nav-second-level">
                     <li class="nav-item" routerLinkActive="active mm-active">

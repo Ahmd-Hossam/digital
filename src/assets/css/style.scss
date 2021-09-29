@@ -55,15 +55,15 @@ Main Content CSS
   min-height: 100vh;
   padding: {
     right: 30px;
-    left: 280px;
+    left: 80px;
     bottom: 44px;
   }
 
   &.hide-sidemenu-area {
-    padding-left: 85px;
+    //padding-left: 85px;
   }
 
-  background: #fafafa;
+  background:#f2f5fb;
 
   .changing-content {
     background: white;

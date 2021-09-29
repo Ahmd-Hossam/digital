@@ -9,14 +9,14 @@ import { UserService } from 'src/app/core/services/user.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  currentUserName;
+  currentUserName ="Mohamed";
 
   constructor(private authApi: AuthenticationService,
     private userService: UserService,
     private router: Router) { }
 
   ngOnInit() {
-    this.currentUserName = this.userService.isAuthenticated() ? this.userService.getCurrentUserData().fullName : '';
+    //this.currentUserName = this.userService.isAuthenticated() ? this.userService.getCurrentUserData().fullName : '';
   }
 
   logout() {

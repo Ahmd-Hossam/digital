@@ -5,11 +5,13 @@ import { CompanyJobsModule } from './pages/company-jobs/company-jobs.module';
 import { DepartmentModule } from './pages/department/department.module';
 import { ReportsAnalyticsModule } from './pages/reports-analytics/reports-analytics.module';
 import { FormControlsComponent } from './shared/form-controls/form-controls.component';
+import { ProfileComponent } from './shared/profile/profile.component';
 
 
 const routes: Routes = [
   // Form controls page
   { path: 'showcase', component: FormControlsComponent },
+  { path: 'profile', component: ProfileComponent },
 
   // Pages without Layout
   {
