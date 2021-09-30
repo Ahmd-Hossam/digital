@@ -1,18 +1,22 @@
 .main{
     margin-top: 30px;
     .post{
-        padding: 16px 16px 65px 16px;
+        margin-top: 30px;
+        //padding: 5px;
         border-radius: 16px;
         box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.01);
         background-color: #fff;
         position: relative;
         .header{
+            position: relative;
+            padding:16px 16px 0 16px;
             .imgContainer{
-
+            
             }
             .info{
                 padding-top: 5px;
                 padding-left:16px;
+             
                 .name{
                     font-weight: bold;
                     font-size: 1.1rem;
@@ -24,27 +28,40 @@
                 }
                 .place{
                     color: #03a3ee;
+                    margin-bottom: 0;
                 }
                 .time{
                     position: relative;
-                    top:-22px;
+                    top:-6px;
                     font-size: 14px;
                     color: #b5c1df;
                 }
                 i{
-                    position: relative;
-                    color: #c4c7cf;
-                    top: 2px;
-                    font-size: 23px;
-                    right: -28px;
+                    position: absolute;
+                    color: #c4c7cf94;
+                    top: 11px;
+                    font-size: 30px;
+                    right: 3px;
                     cursor: pointer;
                 }
             }
         }
 
         .body{
+            padding:0 16px;
+            .bigContainer{
+                margin-top: 12px;
+                display: flex;
+                //flex-direction: column;
+                flex-wrap: wrap-reverse;
+            }
             .imgContainer{
-
+                flex:50%;
+                flex-direction: column;
+                img{
+                    width:100%;
+                    height: 100%;
+                }
             }
             .discription{
                 margin-top: 20px;
@@ -70,43 +87,56 @@
         }
 
         .footer{
+            padding:0 16px;
             span{
                 font-size: 14px;
                 color: #b5c1df;
+                position: relative;
+                top: 3px;
             }
             .like{
+           
                 margin-right: 10px;
-                margin-top: 3px;
-                margin-top: 3px;
                 color:#03a3ee
             }
-
+ 
             .seen{
                 padding-right: 5px;
             }
         }
 
         .addComment{
+            padding:0 16px 16px 16px;
             margin: 24px auto;
-            padding:12px 16px;
-            border-radius: 25px;
-            background-color: #f7f9fd;
-            p{
-                font-size: 14px;
-                padding: 0;
-                margin: 0;
-                color: #b5c1df;
+            input{
+                padding:12px 16px;
+                border-radius: 25px;
+                background-color: #f7f9fd;
+                width:100%;
+                border:none;
+                &:focus::placeholder {
+                    color: transparent;
+                  }
             }
         }
 
+        .comments{
+            padding:0 16px;
+        }
+
         .loadMore{
-            background-color: #f3f6ff;
-            padding:10px;
-            margin-bottom: 0;
-            position: absolute;
-            left: 6px;
-            right: 6px;
+            margin:6px;
+            position: relative;
             bottom: 6px;
+            cursor: pointer;
+            background-color: #f3f6ff;
+            padding:8px;
+            margin-bottom: 0;
+            
+            ///position: absolute;
+            //left: 6px;
+            //right: 6px;
+            //bottom: 6px;
             border-bottom-right-radius: 16px;
             border-bottom-left-radius: 16px;
             display: flex;

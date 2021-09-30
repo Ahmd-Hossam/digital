@@ -1,29 +1,32 @@
 <div class="main">
-    <div class="post">
+    <div class="post" *ngFor="let post of posts; index as i">
         <div class="header d-flex">
             <div class="imgContainer">
-                <img src="assets/img/home/posts/Ellipse 36.png" alt="">
+                <img [src]="post.img" alt="">
             </div>
             <div class="info">
                 <div class="d-flex">
-                    <h2 class="name"> Samir Mohanad </h2>
-                    <span class="title"> added new post in </span>
-                    <p class="place">  Front-End Department </p>
+                    <h2 class="name"> {{post.name}} </h2>
+                    <span class="title"> {{post.type}} </span>
+                    <p class="place">  {{post.place}} </p>
                     <i class='bx bx-dots-vertical-rounded'></i>
                 </div>
-                <span class="time"> Today at 8:30 AM </span>
+                <span class="time"> {{post.time}} </span>
             </div>
         </div>
 
         <div class="body">
-            <div class="imgContainer">
-                <img src="assets/img/home/posts/Mask Group 49@2x.png" alt="">
+            <div class="bigContainer">
+                <div class="imgContainer" *ngFor="let postImg of post.postImgs; index as i">
+                    <img [src]="postImg.img" alt="">
+                </div>
             </div>
+
             <div class="discription">
-                <h2 class="title"> What is the best resources to learn front-end for free? </h2>
+                <h2 class="title"> {{post.postQues}} </h2>
                 <p class="paragraph">
-                    simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
-                    industry’s standard dummy text ever since … <span> See More </span>
+                    {{ ( post.postDescription.length > 90 ) ? ( post.postDescription | slice:0:90 )+ "..." :  post.postDescription }}
+                    <span *ngIf="post.postDescription.length > 100"> See More </span>
                 </p>
             </div>
         </div>
@@ -31,28 +34,25 @@
         <div class="footer d-flex justify-content-between">
             <div>
                 <img src="assets/img/home/posts/like.png" alt="">
-                <span class="like"> 20 </span>
+                <span class="like"> {{post.likes}} </span>
                 <img src="assets/img/home/posts/commint.png" alt="">
-                <span> 06 </span>
+                <span> {{post.commentsNumber}} </span>
             </div>
             <div class="seen">
                 <img src="assets/img/home/posts/eye.png" alt="">
-                <span> 25 </span>
+                <span> {{post.views}} </span>
             </div>
         </div>
 
         <div class="addComment">
-            <p>
-                Add Comment …
-            </p>
+            <input type="text" class="formControl" placeholder="Add Comment …">
         </div>
 
         <div class="comments">
-            <comment></comment>
-            <comment></comment>
+            <comment [comments]="post?.comments"></comment>
         </div>
 
-        <div class="loadMore">
+        <div class="loadMore" *ngIf='post.comments !=""'>
             <p class="text-center"> Load more comments </p>
         </div>
     </div>

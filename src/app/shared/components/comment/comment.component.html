@@ -1,31 +1,31 @@
-<div class="comments d-flex">
-    <div class="imgContainer">
-        <img src="assets/img/navbar/Rectangle@2x.png" alt="">
+<div class="comments d-flex" *ngFor="let comment of comments; index as i">
+    <div class="imgContainer col-2 p-0 m-0">
+        <img [src]="comment.img" alt="">
     </div>
-    <div class="info">
+    <div class="info col-10 p-0 m-0">
         <div class="header d-flex justify-content-between">
             <div>
-                <h2 class="name">  Samir Mohanad </h2>
-                <span class="bio"> UI Designer </span>
+                <h2 class="name">  {{comment.name}} </h2>
+                <span class="bio">{{comment.jobTitle}}  </span>
             </div>
             <div class="activeTime">
-                3 min ago
+                {{comment.time}} 
             </div>
         </div>
 
         <div class="body">
-            <p>
-                simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry’s standard ever… <span> See More </span>
+            <p> {{ ( comment.comment.length > 90 ) ? ( comment.comment | slice:0:90 )+ "..." :  comment.comment }}
+              <span class="seeMore" *ngIf="comment.comment.length > 100"> See More </span>
             </p>
         </div>
+        
         <div class="footer">
             <div>
                 <img src="assets/img/home/posts/gray like.png" alt="">
-                <span class="likes"> 10 Likes </span>
-                <span class="delete"> Delete </span>
+                <span class="likes"> {{comment.likes}} Likes </span>
+                <span class="delete" *ngIf="comment.isDeleted"> Delete </span>
             </div>
         </div>
-        <span class="line">.</span>
+        <span class="line" *ngIf="comment.id == 0"> </span>
     </div>
 </div>
