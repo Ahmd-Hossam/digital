@@ -25,8 +25,8 @@ export class ActionListComponent implements OnInit {
 
     { 
       img:'assets/img/home/action list/lamp.png',
-      small:'EPPM',
-      title:'-Sample received from customer..',
+      small:'TAs',
+      title:'-Sample received from customer...',
       description:'Here we can add some details about the … ',
       actions:true,
     }

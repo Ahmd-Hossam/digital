@@ -1,5 +1,4 @@
 import { Routes, Route } from '@angular/router';
-import { AuthenticationGuard } from '../core/services/authentication.guard';
 import { LayoutComponent } from './layout.component';
 
 /**
@@ -16,7 +15,6 @@ export class Layout {
       path: '',
       component: LayoutComponent,
       children: routes,
-      canActivate: [AuthenticationGuard],
       // Reuse LayoutComponent instance when navigating between child views
       data: { reuse: true, allowedClaims }
     };
