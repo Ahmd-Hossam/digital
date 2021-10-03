@@ -11,6 +11,19 @@ Sidemenu CSS
     transition: $transition;
     background:#fff;
     .sidemenu-header{
+        position: relative;
+        .arrow{
+            position: absolute;
+            right: -18px;
+            bottom: -86px;
+            display: block;
+            font-size: 27px;
+            border-radius: 50%;
+            padding: 3px;
+            text-align: center;
+            background: #f2f5fb;
+            cursor: pointer;
+        }
         a{
             display: block;
             width:50px;
@@ -46,7 +59,7 @@ Sidemenu CSS
         margin:0;
         list-style: none;
         position: relative;
-        top: 20px;
+        top: 70px;
         left: 50px;
         li{
             margin-top: 20px;

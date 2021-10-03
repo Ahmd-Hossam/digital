@@ -26,21 +26,33 @@ This files table contents are outlined below>>>>>
 ** - Not Authorized CSS
 ** - Footer CSS
 */
-@import "../css/utils/variables.scss";
+
+/** start shard components **/
 @import "~bootstrap/scss/bootstrap";
 @import "./utils/variables.scss";
 @import "./base/default.scss";
 @import "./layout/sidebar.scss";
 @import "./layout/header.scss";
-@import "./components/table.scss";
 @import "./components/search-bar.scss";
 @import "./components/modal.scss";
 @import "./components/checkbox.scss";
 @import "./components/buttons.scss";
-@import "./components/form-controls.scss";
-@import "./components/badge.scss";
-@import "./components/page-title.scss";
-@import "./components/details-view.scss";
+
+/** start main components **/
+//@import "./pages/action-list.scss";
+//@import "./pages/birthdays.scss";
+//@import "./pages/feeds.scss";
+//@import "./pages/last-activity.scss";
+//@import "./pages/meetings.scss";
+//@import "./pages/pages.scss";
+//@import "./pages/posts.scss";
+//@import "./pages/trips.scss";
+//@import "./pages/weather.scss";
+
+
+
+
+
 
 /*================================================
 Main Content CSS
@@ -49,6 +61,8 @@ Main Content CSS
   transition: $transition;
   overflow: hidden;
   min-height: 100vh;
+  background:#f2f5fb;
+  margin-top:20px;
   padding: {
     right: 30px;
     left: 80px;
@@ -59,7 +73,7 @@ Main Content CSS
     //padding-left: 85px;
   }
 
-  background:#f2f5fb;
+
 
   .changing-content {
     background: white;

@@ -35,7 +35,6 @@
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/popper.js/dist/umd/popper.min.js",
               "src/assets/css/vendors.min.css",
-              "src/assets/css/responsive.scss",
               "node_modules/leaflet/dist/leaflet.css",
               "src/assets/css/style.scss",
               "node_modules/ngx-toastr/toastr.css"

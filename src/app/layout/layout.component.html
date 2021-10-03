@@ -2,6 +2,7 @@
 <div class="main-content d-flex flex-column">
   <app-header></app-header>
   <div [ngClass]="path === '/home' ? 'home' : 'changing-content'">
+    <span class="line"></span>
     <router-outlet></router-outlet>
   </div>
   <div class="flex-grow-1"></div>

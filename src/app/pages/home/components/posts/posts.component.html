@@ -3,6 +3,8 @@
         <div class="header d-flex">
             <div class="imgContainer">
                 <img [src]="post.img" alt="">
+                <img *ngIf="post.status === 'active'" class="activeLastSeen" src="assets/img/home/posts/active.png" alt="">
+                <img *ngIf="post.status === 'lastSeen'"  class="activeLastSeen" src="assets/img/home/posts/lastSeen.png" alt="">
             </div>
             <div class="info">
                 <div class="d-flex">

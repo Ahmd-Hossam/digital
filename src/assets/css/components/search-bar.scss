@@ -3,7 +3,7 @@
   .table-search-bar {
     width: 30px !important;
     height: 38px !important;
-    background-color: #f2f5fb !important;
+    background-color: transparent;
     border-radius: 10px;
     border: none !important;
     color: $nero_color !important;
@@ -38,8 +38,9 @@
     color: $dark_gray_color !important;
     cursor: pointer;
     i {
-      color: $black_color !important;
       cursor: pointer;
+      font-size: 26px;
+      color:#525F80
     }
   }
 }

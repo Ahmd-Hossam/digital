@@ -1,6 +1,8 @@
 <div class="comments d-flex" *ngFor="let comment of comments; index as i">
     <div class="imgContainer col-2 p-0 m-0">
         <img [src]="comment.img" alt="">
+        <img *ngIf="comment.status === 'active'" class="activeLastSeen" src="assets/img/home/posts/active.png" alt="">
+        <img *ngIf="comment.status === 'lastSeen'"  class="activeLastSeen" src="assets/img/home/posts/lastSeen.png" alt="">
     </div>
     <div class="info col-10 p-0 m-0">
         <div class="header d-flex justify-content-between">

@@ -1,0 +1,112 @@
+.action-list{
+    background-color: #fff;
+    border-radius: 16px;
+    margin-top: 30px;
+    overflow: hidden;
+    padding:5px;
+    .mainTitle{
+        padding:10px;
+        width: 100%;
+        p{  
+            font-size: 18px;
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #3a4778;
+            text-transform: capitalize;
+            img{
+                position: relative;
+                top:-5px;
+                color: #b6bfe1;
+            }
+        }
+    }
+    .item{
+        background-color: #f3f6ff;
+        padding:15px;
+        border-radius: 16px;
+        margin:10px;
+        margin-top: 15px;
+        position: relative;
+        .colse{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 26px;
+            color: #b6bfe1;
+            cursor: pointer;
+        }
+       .header{
+           margin-top: 15px;
+           img{
+            margin-left: 10px;
+            margin-top: 1px;
+           }
+          .title{
+              padding:0;
+              padding-right: 10px;
+              padding-left: 5px;
+              font-weight: bold;
+              color: #3a4778;
+              line-height: 1.4;
+              small{
+                color: #b6bfe1;
+            }
+          }
+       }
+
+       .body{
+           margin-top: 10px;
+           padding-left: 5px;
+          .description{
+              p{
+                line-height: 1.4;
+                margin-bottom: 10px;
+                padding-bottom: 0;
+                color: #6372ac;
+                
+              }
+              span{
+                color: #03a3ee;
+                font-weight: 500;
+                display: block;
+                font-size: .5rem;
+                cursor: pointer;
+                i{
+                    position: relative;
+                    top: 6px;
+                    right: 5px;
+                    color: #03a3ee;
+                }
+              }
+          }
+       }
+
+       .footer{
+           margin-top: 15px;
+            i{
+                border-radius: 50%;
+                padding:3px;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            .redoIcon{
+                transform:scaleY(-1);
+                i{
+                    border:1px solid #3a4778;
+                    transform:scaleX(-1);
+                }
+            }
+            .circleIcon{
+                .x{
+                    margin-right: 10px;
+                    color:#f06676;
+                    border:1px solid #f06676;
+                }
+                .check{
+                    color:#7AB700;
+                    border:1px solid #7AB700;
+                }
+            }
+       }
+    }
+}

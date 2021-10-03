@@ -12,4 +12,6 @@ export class LastActivityComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }

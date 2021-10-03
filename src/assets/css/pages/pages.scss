@@ -32,18 +32,11 @@
         display: flex;
         padding: 12px 8px 5px 8px;
         background-color: #fff;
-        position: relative;
-        .heart{
-            position: absolute;
-            right: 10px;
-            font-size: 22px;
-            color: #b6bfe1;
-            top: 20px;
-        }
         &:hover{
             color: #b6bfe1;
         }
         .info{
+         
             padding-left: 20px;
             p{
                 padding:0;

@@ -3,21 +3,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxTagsModule } from 'ngx-tags-input-box';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-import { NgxEchartsModule } from 'ngx-echarts';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { NgApexchartsModule } from 'ng-apexcharts';
-import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-import { NgxDatesPickerModule } from 'ngx-dates-picker';
 import { CountdownModule } from 'ngx-countdown';
 import { ProfileComponent } from './profile/profile.component';
-
 
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { CommentComponent } from './components/comment/comment.component';
 import { CardComponent } from './components/card/card.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   imports: [
@@ -27,16 +21,7 @@ import { CardComponent } from './components/card/card.component';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    NgxTagsModule,
     NgxSkeletonLoaderModule,
-    NgxPaginationModule,
-    NgApexchartsModule,
-    NgxDatesPickerModule,
-    NgxEchartsModule.forRoot({
-      echarts: () => import('echarts'),
-    }),
-    NgMultiSelectDropDownModule.forRoot(),
-
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({
       "radius": 60,
@@ -62,15 +47,14 @@ import { CardComponent } from './components/card/card.component';
     CountdownModule,
     ReactiveFormsModule,
     NgbModule,
-    NgxPaginationModule,
     NgxSkeletonLoaderModule,
-    NgxTagsModule,
     CommentComponent,
     ],
   declarations: [
     ProfileComponent,
     CommentComponent,
     CardComponent,
+    SliderComponent,
   ],
 })
 export class SharedModule {}
