@@ -1,0 +1,88 @@
+
+.prayers{
+    background: #ffff;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding:5px;
+    .header{
+        background: url("../../img/home/calendar/calendar.png"), #6372AC;
+        background-size: cover;
+        margin: 9px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        padding: 17px 13px;
+        border-radius: 14px;
+        height: 148px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .title{
+           .name{
+                margin: 0;
+                padding: 0;
+                color: #ffe748;
+                font-weight: bold;
+                font-size: 1.5rem;
+           }
+           .time{
+                margin: 0;
+                padding:0;
+                color:#fff;
+           }
+        }
+        .distance{
+            color: #fff;
+            background: #6B79B0;
+            padding: 5px 13px;
+            border-radius: 9px;
+            height: 33px;
+        }
+    }
+    .line{
+        width: 110%;
+        height: 2px;
+        background: $solitude_color;
+        position: relative;
+        left:-5px
+    }
+    .body{
+        background: #fff;
+        padding-bottom: 5px;
+        .item{
+            display: flex;
+            justify-content: space-between;
+            padding:8px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 3px;
+            margin-left: 5px;
+            margin-right: 5px;
+            .name{
+                img{
+                    color: #f00 !important;
+                    object-fit: contain;
+                    mix-blend-mode: multiply;
+                }
+                small{
+                    font-weight: bold;
+                    color:#3a4778;
+                    text-transform: capitalize;
+                    margin-left: 10px;
+                }
+            }
+            .time{
+                font-weight: 500;
+                color: #6372ac;
+            }
+        }
+        .odd-item{
+            background: $white_smoke_color;
+        }
+    }
+}
+
+.darkColor{
+    background:#e1e6f8 !important;
+    margin-bottom:15px !important;
+}

@@ -1,7 +1,7 @@
 .meetings{
     background-color: #fff;
     border-radius: 16px;
-    margin-top: 30px;
+    margin-bottom: 30px;
     overflow: hidden;
     padding:5px;
     .title{
@@ -19,12 +19,12 @@
                 font-size: 15px;
                 font-weight: 500;
                 text-align: center;
-                color: #b6bfe1;
+                color: $perano_color;
             }
             i{
                 position: relative;
                 top:5px;
-                color: #b6bfe1;
+                color: $perano_color;
             }
         }
     }
@@ -33,6 +33,7 @@
         padding:15px;
         border-radius: 16px;
         margin:10px;
+        min-height: 110px;
        .header{
            display: flex;
            justify-content: space-between;
@@ -53,7 +54,6 @@
               left:15px;
            }
        }
-
 
        .body{
            h2{
@@ -88,3 +88,13 @@
        }
     }
 }
+
+.darkColor{
+    background:#e1e6f8;
+}
+
+.programIconLoading{
+    top:-8px !important;
+    margin-right:10px;
+}
+

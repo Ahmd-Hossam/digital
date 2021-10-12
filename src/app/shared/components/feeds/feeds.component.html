@@ -1,0 +1,21 @@
+<div class="feeds" *ngIf="loading">
+    <div class="row">
+        <div class="col-md-6  m-0 p-0" *ngFor="let feed of feeds; index as i">
+            <div class="item">
+                <small> {{feed.number}} </small>
+                <p> {{feed.name}} </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!------------------------- Start Skeleton Loader ------------>
+<skeleton-loader
+    *ngIf="!loading"
+    [type]="'feeds'"
+    [count]="count">
+</skeleton-loader>
+<!---------------------------- End Skeleton Loader ------------>

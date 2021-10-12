@@ -1,0 +1,30 @@
+<div *ngIf="loading">
+  <div  class="trips" *ngFor="let trip of trips, index as i">
+      <div class="imgContainer">
+        <img  [src]="trip.img" alt="">
+      </div>
+      
+      <div class="info">
+        <h2> {{trip.title}}  </h2>
+        <p> {{trip.discription}}   </p>
+      </div>
+
+      <div class="footer d-flex justify-content-between">
+        <span class="going"> <i class="bx bx-check-circle"></i> {{trip.status}} </span>
+        <span class="people"> 
+          <img src="../../../../../assets/img/home/trips/Ellipse 27.jpg" alt="">
+          <img src="../../../../../assets/img/home/trips/Ellipse 27.jpg" alt="">
+          <img src="../../../../../assets/img/home/trips/Ellipse 27.jpg" alt="">
+          <small> +125  </small>
+        </span>
+      </div>
+  </div>
+</div>
+
+<!------------------------- Start Skeleton Loader ------------>
+<skeleton-loader
+    *ngIf="!loading"
+    [type]="'trips'"
+    [count]="count">
+</skeleton-loader>
+<!---------------------------- End Skeleton Loader ------------>

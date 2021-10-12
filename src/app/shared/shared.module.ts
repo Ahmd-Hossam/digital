@@ -6,12 +6,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { CountdownModule } from 'ngx-countdown';
 import { ProfileComponent } from './profile/profile.component';
+import { BirthdaysComponent } from '././components/birthdays/birthdays.component'
 
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { CommentComponent } from './components/comment/comment.component';
-import { CardComponent } from './components/card/card.component';
-import { SliderComponent } from './components/slider/slider.component';
+import { ActionListComponent } from './components/action-list/action-list.component';
+import { PagesComponent } from './components/pages/pages.component';
+import { FeedsComponent } from './components/feeds/feeds.component';
+import { WeatherComponent } from './components/weather/weather.component';
+import { MeetingsComponent } from './components/meetings/meetings.component';
+import { TripsComponent } from './components/trips/trips.component';
+import { CoinsComponent } from './components/coins/coins.component';
+import { SidePanelComponent } from './components/side-panel/side-panel.component';
+import { SkeletonLoaderComponent } from './plugins/skeleton-loader/skeleton-loader.component';
+import { PrayersComponent } from './components/prayers/prayers.component';
+import { TestSkeletonComponent } from './plugins/test-skeleton/test-skeleton.component';
+
 
 @NgModule({
   imports: [
@@ -48,13 +58,33 @@ import { SliderComponent } from './components/slider/slider.component';
     ReactiveFormsModule,
     NgbModule,
     NgxSkeletonLoaderModule,
-    CommentComponent,
+    BirthdaysComponent,
+    ActionListComponent,
+    FeedsComponent,
+    MeetingsComponent,
+    PagesComponent,
+    TripsComponent,
+    WeatherComponent,
+    CoinsComponent,
+    SidePanelComponent,
+    SkeletonLoaderComponent,
+    PrayersComponent,
+    TestSkeletonComponent
     ],
   declarations: [
     ProfileComponent,
-    CommentComponent,
-    CardComponent,
-    SliderComponent,
+    BirthdaysComponent,
+    ActionListComponent,
+    PagesComponent,
+    FeedsComponent,
+    WeatherComponent,
+    MeetingsComponent,
+    TripsComponent,
+    CoinsComponent,
+    SidePanelComponent,
+    SkeletonLoaderComponent,
+    PrayersComponent,
+    TestSkeletonComponent
   ],
 })
 export class SharedModule {}

@@ -1,34 +1,72 @@
-<div class="main">
-    <div class="post" *ngFor="let post of posts; index as i">
+<div  class="posts" *ngIf="loading">
+    <div class="post" *ngFor="let post of posts; index as i"   [ngClass]="{'specialPost' : post.special && loading}">
         <div class="header d-flex">
-            <div class="imgContainer">
+            <div  class="imgContainer">
                 <img [src]="post.img" alt="">
-                <img *ngIf="post.status === 'active'" class="activeLastSeen" src="assets/img/home/posts/active.png" alt="">
+                <img *ngIf="post.status === 'active'"    class="activeLastSeen" src="assets/img/home/posts/active.png" alt="">
                 <img *ngIf="post.status === 'lastSeen'"  class="activeLastSeen" src="assets/img/home/posts/lastSeen.png" alt="">
             </div>
+
             <div class="info">
                 <div class="d-flex">
                     <h2 class="name"> {{post.name}} </h2>
                     <span class="title"> {{post.type}} </span>
                     <p class="place">  {{post.place}} </p>
-                    <i class='bx bx-dots-vertical-rounded'></i>
+                    <i (click)="toggleClass = !toggleClass" class='bx bx-dots-vertical-rounded'></i>
                 </div>
                 <span class="time"> {{post.time}} </span>
+            </div>
+
+            <div class="alert" *ngIf="toggleClass">
+                <span class="arrow"></span>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="bx bx-user-x"> </i>
+                        <a href="#"> Unfollow Samir  </a>
+                    </li>
+                    <li>
+                        <i class="bx bx-hide"> </i>
+                        <a href="#"> Hide Post  </a>
+                    </li>
+                    <li>
+                        <i class="bx bx-flag"> </i>
+                        <a href="#"> Report  </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
         <div class="body">
-            <div class="bigContainer">
-                <div class="imgContainer" *ngFor="let postImg of post.postImgs; index as i">
-                    <img [src]="postImg.img" alt="">
+            <div class="imgContainer">
+                <!-- if not three imgs -->
+                <div class="row" *ngIf='post.postImgs.length != 3'>
+                    <div   
+                        [ngClass]="{'col-6' : post.postImgs.length === 2 || post.postImgs.length > 3}"
+                        class="col p-0 m-0"
+                        *ngFor='let postImg of post.postImgs'>
+                        <img [ngClass]="{'ifTwoImgs': post.postImgs.length === 2 }" [src]="postImg.img" alt="">
+                    </div>
+                </div>
+
+                <!-- if three imgs -->
+                <div class="row threeImgs" *ngIf='post.postImgs.length === 3'>
+                    <div class="col m-0 p-0">
+                        <img class="imgOne" [src]="post.postImgs[0].img"  alt="">
+                    </div>
+                    <div class="col  m-0 p-0">
+                        <img class="imgTwo" [src]="post.postImgs[1].img"  alt="">
+                        <img class="imgThree" [src]="post.postImgs[2].img"  alt="">
+                    </div>
                 </div>
             </div>
 
             <div class="discription">
                 <h2 class="title"> {{post.postQues}} </h2>
-                <p class="paragraph">
-                    {{ ( post.postDescription.length > 90 ) ? ( post.postDescription | slice:0:90 )+ "..." :  post.postDescription }}
-                    <span *ngIf="post.postDescription.length > 100"> See More </span>
+                <p *ngIf="!showParagraph" class="paragraph">{{ (post.postDescription.length > 90) ? ( post.postDescription | slice:0:90 )+ "..." :  post.postDescription }}
+                    <a *ngIf="post.postDescription.length > 100" (click)="seeMore()"> See More </a>
+                </p>
+                <p *ngIf="showParagraph" class="paragraph"> {{post.postDescription }}
+                    <a *ngIf="post.postDescription.length > 100" (click)="seeLess()">  Less </a>
                 </p>
             </div>
         </div>
@@ -46,7 +84,7 @@
             </div>
         </div>
 
-        <div class="addComment">
+        <div  class="addComment">
             <input type="text" class="formControl" placeholder="Add Comment …">
         </div>
 
@@ -57,5 +95,17 @@
         <div class="loadMore" *ngIf='post.comments !=""'>
             <p class="text-center"> Load more comments </p>
         </div>
-    </div>
+    </div> 
 </div>
+
+
+<!------------ Start Skeleton Loader --------->
+<skeleton-loader
+    *ngIf="!loading"
+    [type]="'posts'"
+    [count]="count">
+</skeleton-loader>
+<!----------- End Skeleton Loader ------------>
+
+  
+

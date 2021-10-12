@@ -1,0 +1,45 @@
+<div class="weather" *ngIf="loading" [ngClass]="{'darkColor': darkMode}">
+    <div *ngFor="let weather of weathers">
+        <div class="weather">
+            <div class="header">
+                <span class="line"></span>
+                <div class="row">
+                    <div class="col-8 p-0 m-0">
+                        <div class="sun d-flex">
+                            <img  [src]="weather.todayImg" alt="">
+                            <div class="info">
+                                <p> {{weather.todayWeather}} </p>
+                                <h1> {{weather.todayCelsius}} </h1>
+                                <h3> Wind: 08 km/h </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fisher col-4 p-0 m-0">
+                        <img src="assets/img/home/weater/fisher.png" alt="">
+                        <i class="bx bx-check-circle"></i> 
+                    </div>
+                </div>
+            </div>
+        
+            <div class="body">
+                <div class="celsius" [ngClass]="{'darkColor': darkMode}" >
+                    <div class="item" *ngFor="let day of weather.week">
+                        <p class="name"> {{day.name}} <p>
+                        <h2> {{day.Celsius}} </h2>
+                        <p>  {{day.distance}} </p>
+                        <img [src]="day.img" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------- Start Skeleton Loader ------------>
+<skeleton-loader
+    *ngIf="!loading"
+    [type]="'weathers'"
+    [count]="count">
+</skeleton-loader>
+<!---------------------------- End Skeleton Loader ------------>

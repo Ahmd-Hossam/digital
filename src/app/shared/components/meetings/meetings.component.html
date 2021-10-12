@@ -1,0 +1,42 @@
+<div *ngIf="loading" class="meetings" [ngClass]="{'darkColor': darkMode}">
+    <div class="title">
+        <p> Meetings  </p>
+        <p> See All <i class="bx bx-chevron-right h4 cursor-pointer m-0"></i> </p>
+    </div>
+    <div *ngFor="let item of meetings; index as i">
+        <div  class="item">
+            <div class="header">
+                <span class="status" >
+                    <p class="time">
+                        <img [src]="item.status" alt="">
+                        {{item.time}}
+                    </p>
+                </span>
+
+                <span class="programIcon">
+                    <img [src]="item.appIcon" alt="">
+                </span>
+            </div>
+
+            <div class="body">
+                <h2 > {{item.body}}</h2>
+            </div>
+
+            <div class="footer">
+                <span class="people" *ngFor="let person of item.stuff; index as i"> 
+                    <img [src]="person.img" alt="">
+                </span>
+                <small class="allNumbers"> {{item.total}} </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------- Start Skeleton Loader ------------>
+<skeleton-loader
+    *ngIf="!loading"
+    [type]="'meetings'"
+    [count]="count">
+</skeleton-loader>
+<!---------------------------- End Skeleton Loader ------------>

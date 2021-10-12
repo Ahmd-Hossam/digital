@@ -3,31 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
-import { PagesComponent } from './components/pages/pages.component';
-import { FeedsComponent } from './components/feeds/feeds.component';
-import { MeetingsComponent } from './components/meetings/meetings.component';
-import { LastActivityComponent } from './components/last-activity/last-activity.component';
-import { TripsComponent } from './components/trips/trips.component';
-import { BirthdaysComponent } from './components/birthdays/birthdays.component';
-import { ActionListComponent } from './components/action-list/action-list.component';
-import { PostsComponent } from './components/posts/posts.component';
-import { WeatherComponent } from './components/weather/weather.component';
-
-import { SharedModule } from '../../shared/shared.module'
+import { SharedModule } from '../../shared/shared.module';
+import { PostsComponent } from './components/posts/posts.component'
+import { CommentsComponent } from './components/comments/comments.component';
+import { WidgetsModalComponent } from './components/widgets-modal/widgets-modal.component';
+import { LatestActivityComponent } from './components/latest-activity/latest-activity.component'
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    PagesComponent,
-    FeedsComponent,
-    MeetingsComponent,
-    TripsComponent,
-    BirthdaysComponent,
-    ActionListComponent,
     PostsComponent,
-    LastActivityComponent,
-    WeatherComponent
+    CommentsComponent,
+    WidgetsModalComponent,
+    LatestActivityComponent
   ],
   imports: [
     CommonModule,

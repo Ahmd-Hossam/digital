@@ -1,0 +1,83 @@
+
+.comments{
+    margin-bottom: 20px;
+    padding: 0px 9px !important;
+    .imgContainer{
+        position: relative;
+        width:45px;
+        height: 45px;
+        .minImg{
+            width:100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .activeLastSeen{
+            position: absolute;
+            top: 62%;
+            height: 16px;
+            width: 17px;
+            right: -5px;
+        }
+    }
+
+    .info{
+        padding-left: 18px !important;
+        .header{
+            position: relative;
+            padding:0 !important;
+            .name{
+                margin-top: 5px;
+                margin-bottom: 0;
+                font-weight: bold;
+                font-size: 1rem;
+                color: #3a4778;
+            }
+            .bio{
+               color:$perano_color;
+               font-weight:500;
+               margin-left: 0;
+
+            }
+            .activeTime{
+                color:$perano_color;
+                position: absolute;
+                right: 0;
+            }
+        }
+        .body{
+            padding-top: 8px;
+            margin-bottom: 0;
+            P{
+                color:#6372ac;
+                margin-bottom: 7px;
+                line-height: 1.57;
+                .seeMore{
+                    color: #03a3ee;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .footer{
+            span{
+                position: relative;
+                top: 4px;
+                left: 2px;
+            }
+            .likes{
+                color:#6372ac;
+                font-weight: 500;
+            }
+            .delete{
+                margin-left: 20px;
+                color:$perano_color;
+            }
+        }
+        .line{
+            display: block;
+            height: 1px;
+            margin-top: 15px;
+            background-color: #e6e8f4;
+        }
+    }
+}

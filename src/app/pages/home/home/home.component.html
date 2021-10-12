@@ -1,21 +1,43 @@
 <div class="main">
     <div class="row">
         <div class="col-lg-3">
-            <feeds></feeds>
-            <pages></pages>
+            <!--------- start birthdays -->
+            <feeds [feeds]="feeds"></feeds>
+
+            <!--------- start birthdays -->
+            <pages [pages]="pages"></pages>
+
+            <!--------- start birthdays -->
             <trips></trips>
+
+            <!--------- start birthdays -->
             <birthdays></birthdays>
         </div>
 
         <div class="col-lg-6">
-            <last-activity></last-activity>
+            <latest-activity></latest-activity>
             <posts></posts>
         </div>
 
-        <div class="col-lg-3">
-            <weather></weather>
-            <meetings></meetings>
-            <action-list></action-list>
+        <div class="col-lg-3"> 
+            <weather [weathers]="weathers"></weather>
+            <!-------    start action list -->
+            <action-list [actionItems]="actionItems"> </action-list>
+
+            <!---------- start prayers  -->
+            <prayers [prayersData]="prayers"> </prayers>
+
+            <!---------- start coins      -->
+            <coins [coins]="coins"></coins>
+
+            <!--------    start  meetings -->
+            <meetings [meetings]="meetings"> </meetings>
         </div>
+
+        <!-- popup widgets-->
+        <div class="widgets">
+            <img (click)="onView()" src="../../../../assets/img/home/widgets/widgets.png" alt="">
+        </div>
+        <widgets-modal></widgets-modal>
     </div>
 </div>

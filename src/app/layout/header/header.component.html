@@ -2,15 +2,18 @@
     <nav class="navbar top-navbar navbar-expand">
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportContent">  
             <span class="radius"></span>
-            <div class="d-flex time">
-                <div class="clock">
-                    <img src="assets/img/navbar/clock1.png" alt="">
+            <!-- 
+                <div class="d-flex time">
+                    <div class="clock">
+                        <img src="assets/img/navbar/clock1.png" alt="">
+                    </div>
+                    <div class="date">
+                        <h1> 03:30 PM </h1>
+                        <p> Monday, 23 Sep 2021 </p>
+                    </div>
                 </div>
-                <div class="date">
-                    <h1> 03:30 PM </h1>
-                    <p> Monday, 23 Sep 2021 </p>
-                </div>
-            </div>
+            -->
+          
 
             <div class="search-container search d-none ml-auto d-md-block">
                 <input id="table-search-bar" class="form-control rounded-20 table-search-bar" type="text" placeholder="Search"
@@ -190,50 +193,18 @@
                     </a>
 
                     <div class="dropdown-menu">
-                        <div class="dropdown-header d-flex flex-column align-items-center">
-                            <div class="figure mb-3">
-                                <img src="assets/img/navbar/Rectangle@2x.png"  alt="image">
-                            </div>
-
-                            <div class="info text-center">
-                                <span class="name"> Mohamed Salah </span>
-                                <p class="mb-3 email">mo@salah.com</p>
-                            </div>
-                        </div>
-
+                        <span class="arrow"></span>
                         <div class="dropdown-body">
-                            <ul class="profile-nav p-0 pt-3">
+                            <ul class="profile-nav p-0">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class='bx bx-user'></i> <span>Profile</span>
+                                        <i class='bx bx-user'></i> <span> My Profile</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class='bx bx-envelope'></i> <span>My Inbox</span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class='bx bx-edit-alt'></i> <span>Edit Profile</span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class='bx bx-cog'></i> <span>Settings</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="dropdown-footer">
-                            <ul class="profile-nav">
-                                <li class="nav-item">
-                                    <a (click)="logout()" class="nav-link">
-                                        <i class='bx bx-log-out'></i> <span>Logout</span>
+                                        <i class='bx bx-log-out'></i> <span> Log Out </span>
                                     </a>
                                 </li>
                             </ul>

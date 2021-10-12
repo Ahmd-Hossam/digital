@@ -1,0 +1,40 @@
+
+<div *ngIf="loading" class="prayers"  [ngClass]="{'darkColor': darkMode}">
+    <div class="header">
+        <div class="title">
+            <h2 class="name"> Maghrib </h2>
+            <p  class="time"> 06:07 pm </p>
+        </div>
+        <div class="distance">
+            -1h : 50m
+        </div>
+    </div>
+
+    <div class="line"></div>
+    <div class="body" [ngClass]="{'darkColor': darkMode}">
+        <div class="items" *ngFor="let item of prayersData; odd   as  odd ;">
+            <div  class="item"  [class.odd-item]="odd">
+                <div class="name">
+                    <img [src]="item.img" alt="">
+                    <small> {{item.name}} </small>
+                </div>
+                <div class="time">
+                    <span> {{item.time}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!------------------------- Start Skeleton Loader ------------>
+<skeleton-loader
+    *ngIf="!loading"
+    [type]="'prayers'"
+    [count]="count">
+</skeleton-loader>
+<!---------------------------- End Skeleton Loader ------------>
+
+
+

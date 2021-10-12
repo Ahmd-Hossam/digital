@@ -1,0 +1,19 @@
+<ngx-skeleton-loader 
+    *ngIf="mode === 'table'"
+    [count]="count"
+    [theme]="style[mode]">
+</ngx-skeleton-loader>
+
+<ngx-skeleton-loader 
+    *ngIf="mode === 'card'"
+    [count]="count"
+    [theme]="style[mode]">
+</ngx-skeleton-loader>
+  
+<ngx-skeleton-loader 
+    *ngIf="mode === 'circle'"
+    [count]="count"
+    appearance="circle"
+    [theme]="style[mode]">
+</ngx-skeleton-loader>
+

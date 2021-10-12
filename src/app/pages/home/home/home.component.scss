@@ -1,0 +1,13 @@
+.main{
+    position: relative;
+    .widgets{
+        position: fixed;
+        cursor: pointer;
+        right: 7px;
+        top: 158px;
+        text-align: center;
+        padding: 6px 8px;
+        background: #fff;
+        border-radius: 8px;
+    }
+}

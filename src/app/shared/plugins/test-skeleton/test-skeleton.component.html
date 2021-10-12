@@ -1,0 +1,247 @@
+
+<!------------------------ Start Feeds Skeleton ------------->
+<div class="feeds" *ngIf="type === 'feeds'">
+    <div class="row">
+        <div class="col-md-6  m-0 p-0" *ngFor="let in of counter(count); index as i">
+            <div class="item">
+                <ngx-skeleton-loader [theme]="{ height: '14px', 'width.%':100}"> </ngx-skeleton-loader>
+                <ngx-skeleton-loader [theme]="{ height: '17px', 'width.%':100}"> </ngx-skeleton-loader>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------ End Feeds Skeleton ---------------->
+
+
+
+<!------------------------ Start Pages Skeleton ---------------->
+<div class="pages" *ngIf="type === 'pages'">
+    <div class="title">
+        <p> Pages  </p>
+    </div>
+    <div *ngFor="let in of counter(count); index as i ">
+        <div class="item" [ngClass]="{'ifLoading': loading}">
+            <ngx-skeleton-loader count="1" [theme]="{height: '50px', width: '50px'}"> </ngx-skeleton-loader>
+            <div class="info pageInfo">
+                <ngx-skeleton-loader [theme]="{ height: '12px',  width: '140px'}"> </ngx-skeleton-loader>
+                <ngx-skeleton-loader [theme]="{ height: '10px',  width: '100px'}"> </ngx-skeleton-loader>
+            </div>  
+        </div>
+    </div>
+</div>
+<!------------------------ End Pages Skeleton ---------------->
+
+
+
+<!------------------------- Start Trips Skeleton ---------------->
+<div class="trips" *ngIf="type === 'trips'">
+    <div class="imgContainer">
+        <ngx-skeleton-loader [theme]="{ height: '166px', width: '255px'}"></ngx-skeleton-loader>
+    </div>
+
+    <div class="info">
+        <ngx-skeleton-loader [count]="2" [theme]="{ height: '18px', width: '220px'}"></ngx-skeleton-loader>
+    </div>
+
+    <div class="footer">
+        <ngx-skeleton-loader  [theme]="{ height: '25px', width: '220px'}"></ngx-skeleton-loader>
+    </div>
+</div>
+<!------------------------- End Trips Skeleton ------------------>
+
+
+
+
+<!------------------------- Start Birthday Skeleton ---------------->
+<div class="isBirthLoading" *ngIf="type === 'birthday'">
+    <ngx-skeleton-loader  [theme]="{ height: '259px', width: '269px'}"></ngx-skeleton-loader>
+</div>
+<!------------------------- End Birthday Skeleton ------------------>
+
+
+
+
+
+<!------------------------- Start Posts Skeleton   -------->
+<div class="posts" *ngIf="type === 'posts'">
+    <div class="post" *ngFor="let in of counter(5); index as i">
+        <div class="header d-flex">
+            <div [ngClass]="{'imgLoading': !loading}">
+                <ngx-skeleton-loader appearance="circle"  [theme]="{width: '50px', height: '50px'}"></ngx-skeleton-loader>
+            </div>
+            <div class="mt-1">
+                <ngx-skeleton-loader  [theme]="{width: '200px',  height: '12px'}"></ngx-skeleton-loader>
+                <ngx-skeleton-loader  [theme]="{width: '120px',  height: '10px'}"></ngx-skeleton-loader>
+            </div>
+        </div>
+
+        <div class="body">
+            <ngx-skeleton-loader appearance="table" [theme]="{width: '', height: '281px'}"></ngx-skeleton-loader>
+        </div>
+
+        <div class="footer" class="commentLoading">
+            <ngx-skeleton-loader  [theme]="{width: '', height: '30px'}"></ngx-skeleton-loader>
+        </div>
+    </div> 
+</div>
+<!--------------------------- End Posts Skeleton   ---------->
+
+
+
+
+<!-------------------------------- Start Weather Skeleton---------->
+<div class="weather" *ngIf="type === 'weathers'">
+    <div class="weather">
+        <div class="header">
+            <span class="line"></span>
+            <div class="row">
+                <div class="col-8 p-0 m-0">
+                    <div class="sun d-flex">
+                        <div class="ml-2">
+                            <ngx-skeleton-loader appearance="circle"  [theme]="{width: '40px', height: '40px'}"></ngx-skeleton-loader>
+                        </div>
+                        <div class="info weatherInfo">
+                            <ngx-skeleton-loader [count]="3"  [theme]="{width: '', height: '11px'}"></ngx-skeleton-loader>
+                        </div>
+                    </div>
+                </div>
+                <div class="fisher col-4 p-0 m-0">
+                    <img src="assets/img/home/weater/fisher.png" alt="">
+                    <i class="bx bx-check-circle"></i> 
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="celsius" [ngClass]="{'darkColor': darkMode}" >
+                <div class="item" *ngFor="let in of counter(4); index as i">
+                    <div class="skeletonHight">
+                        <ngx-skeleton-loader  [theme]="{width: '', height: '11px'}"></ngx-skeleton-loader>
+                    </div>
+                    <ngx-skeleton-loader [count]="2" [theme]="{width: '', height: '11px'}"></ngx-skeleton-loader>
+                    <ngx-skeleton-loader appearance="circle"  [theme]="{width: '', height: ''}"></ngx-skeleton-loader>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------- End Weather Skeleton---------->
+
+
+
+
+<!-------------------------------- Start action list Skeleton---------->
+<div class="action-list"  *ngIf="type === 'actionList'" >
+    <div class="mainTitle d-flex justify-content-between">
+        <p> Action List  </p>
+        <p> <img src="../../../../../assets/img/home/action list/actionIcon.png" alt=""></p>
+    </div>
+    <div *ngFor="let in of counter(count); index as i ">
+        <div class="item">
+            <div class="header row">
+                <span class="ml-2">
+                    <ngx-skeleton-loader appearance="circle" [theme]="{ height: '40px', width: '40px'}"> </ngx-skeleton-loader>
+                </span>
+                <span class="col-9 p-0 m-0">
+                    <div  class="title ml-2">
+                        <ngx-skeleton-loader count="2" [theme]="{ height: '15px', width: '160px'}"></ngx-skeleton-loader>
+                    </div>
+                </span>
+            </div>
+
+            <div class="body">
+                <div class="row">
+                    <span class="col-3 p-0 m-0"> </span>
+                    <div  class="description">
+                        <ngx-skeleton-loader  [theme]="{ height: '19px', width: '160px'}"></ngx-skeleton-loader>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer d-flex justify-content-between">
+                <div class="loading">
+                    <ngx-skeleton-loader  [theme]="{ height: '25px', width: '210px'}"></ngx-skeleton-loader>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------- End action list Skeleton---------->
+
+
+
+
+<!------------------------ Start Prayers Skeleton ------------------->
+<div class="prayers" *ngIf="type === 'prayers'">
+    <div>
+        <ngx-skeleton-loader [theme]="{height: '148px', 'width.%':100}"></ngx-skeleton-loader>
+    </div>
+    <div class="body">
+        <div class="items">
+            <ngx-skeleton-loader [count]="count" [theme]="{ height: '32px','width.%':100}"></ngx-skeleton-loader>
+        </div>
+    </div>
+</div>
+<!------------------------ End Prayers Skeleton --------------------->
+
+
+
+
+
+<!---------------------------------- Start Coins Skeleton ------------->
+<div class="coins" *ngIf="type === 'coins'"> 
+    <ngx-skeleton-loader  [theme]="{ height: '122px', width: '262px'}"></ngx-skeleton-loader>
+    <div class="body">
+        <div class="items" *ngFor="let in of counter(count); index as i">
+            <div class="item row" >
+                <div class="col-5">
+                    <ngx-skeleton-loader  [theme]="{ height: '37px', width: '100px'}"></ngx-skeleton-loader>
+                </div>
+                <div class="col-7 p-0 m-0">
+                    <div class="details">
+                        <div  class="imgContainer isLoading">
+                            <ngx-skeleton-loader appearance="circle" [theme]="{ height: '40px', width: '40px'}"> </ngx-skeleton-loader>
+                        </div>
+                        <ngx-skeleton-loader  [theme]="{ height: '12px', width: '40px'}"> </ngx-skeleton-loader>
+                        <button> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------- End Coins Skeleton --------------->
+
+
+
+
+<!---------------------------------- Start Meetings Skeleton --------------->
+<div class="meetings" *ngIf="type === 'meetings'">
+    <div class="title">
+        <p> Meetings  </p>
+        <p>  </p>
+    </div>
+    <div *ngFor="let in of counter(count); index as i">
+        <div class="item">
+            <div class="header">
+                <span class="status">
+                    <p class="time">
+                        <ngx-skeleton-loader  [theme]="{ height: '13px', width: '150px'}"></ngx-skeleton-loader>
+                        <ngx-skeleton-loader  [theme]="{ height: '13px', width: '120px'}"></ngx-skeleton-loader>
+                     </p>
+                </span>
+                <span class="programIcon programIconLoading">
+                    <ngx-skeleton-loader appearance="circle" [theme]="{ height: '35px', width: '35px'}"> </ngx-skeleton-loader>
+                </span>
+            </div>
+
+            <div class="footer">
+                <ngx-skeleton-loader  [theme]="{ height: '40px', width: '215px'}"></ngx-skeleton-loader>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------- End  Meetings Skeleton --------------->
+
+
+

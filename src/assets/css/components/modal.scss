@@ -6,7 +6,7 @@
     .modal-dialog {
         position: fixed !important;
         margin: 25px !important;
-        width: 50vw !important;
+        width: 70vw !important;
         min-width: 820px !important;
         right: 0;
         top: 5px !important;
@@ -23,7 +23,7 @@
     //max-height: 100% !important;
 
     .modal-header {
-        padding: 29px 29px 0 29px;
+        padding: 15px 29px 0 29px;
         border: 0 !important;
     }
 
@@ -45,7 +45,7 @@
             width: 43px;
             height: 43px;
             padding: 15px;
-            background: $honeysuckle_color;
+            background:none;
             opacity: 1 !important;
             border-radius: 9px;
             border-radius: 10px;
@@ -272,3 +272,6 @@
     .modal-body{ padding-top: 40px !important }
     .modal-footer{ padding:0 15px 15px 0 !important}
   }
+
+
+  

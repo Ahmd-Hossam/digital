@@ -1,18 +1,28 @@
 $font-family: "Nunito", sans-serif;
 
 //Colors
+$alice_blue_color:#e8f6fd;
+$black_color:#0e101a;
+$solitude_color:#f2f5fb;
+$white_color: #ffffff;
+$perano_color:#B6BFE1;
+$white_smoke_color:#f1f1f1;
+$amaranth_color:#dc3545;
+$selective_yellow_color:#fbbc06;
+$whisper_color:#eeeeee;
+
 
 $main-color: #5271ff;
 $primary-color: #007BFF;
 $Medium_slate_blue_color:#727cf5;
 $nero_color: #2a2a2a;
 $midnight_express_color:#272a33;
-$black_color:#0e101a;
+
 $black_russian_color:#272932;
-$white-color: #ffffff;
+
 $white_smoke_color:#f3f3f3;
-$light_white_smoke_color:#f1f1f1;
-$alice_blue_color:#f5f7fa;
+$light_white_smoke_color:$white_smoke_color;
+
 $alice_light_blue_color:#e9f2ff;
 $solitude_color:#ebedf3;
 $warning-color: #ff9865;
@@ -46,7 +56,7 @@ $periwinkle_gray_color: #cfd5e8;
 $preiwinklye_color:#eaeaea;
 $royal_blue_color: #4761d7;
 $heliotrope_color: #8858ff;
-$whisper_color:#eeeeee;
+
 $blue_charcoal_color:#212529;
 $rich_blue_color:#5046BB;
 $royal_blue_color:#2962ff;

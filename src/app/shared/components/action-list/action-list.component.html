@@ -1,0 +1,52 @@
+<div *ngIf="loading" class="action-list" [ngClass]="{'darkColor': darkMode}">
+    <div class="mainTitle d-flex justify-content-between">
+        <p> Action List  </p>
+        <p> <img src="../../../../../assets/img/home/action list/actionIcon.png" alt=""></p>
+    </div>
+    <div  *ngFor="let item of actionItems; index as i">
+        <div class="item">
+            <i class="bx bx-x colse"></i>
+            <div class="header row">
+                <span  class="col-3 p-0 m-0">
+                    <img  [src]="item.img" alt="">
+                </span>
+                <span class="col-9 p-0 m-0">
+                    <div class="title">
+                        <small> {{item.small}} </small>
+                        {{item.title}}
+                    </div>
+                </span>
+            </div>
+
+            <div class="body">
+                <div class="row">
+                    <span class="col-3 p-0 m-0"> </span>
+                    <span  class="description col-9 p-0 m-0">
+                        <p>  {{item.description}} </p>
+                        <span> See Details <i class="bx bx-chevron-right h4 cursor-pointer "></i> </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer d-flex justify-content-between" *ngIf='item.actions'>
+                    <div class="redoIcon"> 
+                        <button> <i class="bx bx-redo"></i> </button>
+                    </div>
+                    <div class="circleIcon"> 
+                        <button>  <i class="bx bx-x x"></i>         </button>
+                        <button>  <i class="bx bx-check check"></i> </button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------- Start Skeleton Loader ------------>
+<skeleton-loader
+    *ngIf="!loading"
+    [type]="'actionList'"
+    [count]="count">
+</skeleton-loader>
+<!---------------------------- End Skeleton Loader ------------>
+

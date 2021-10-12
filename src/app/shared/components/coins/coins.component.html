@@ -1,0 +1,43 @@
+<div *ngIf="loading" class="coins" [ngClass]="{'darkColor': darkMode}">
+    <div class="header">
+        <div class="title">
+            <h2 class="name"> 1836 AED </h2>
+        </div>
+        <div class="discription">
+            <p class="paragraph">
+                United Arab Emirate Dirham
+            </p>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="body">
+        <div class="items" *ngFor="let item of coins; index as i">
+            <div class="item row">
+                <div class="col-5">
+                    <div class="price">
+                        <span> {{item.price}} </span>
+                    </div>
+                </div>
+                <div class="col-7 p-0 m-0">
+                    <div class="details">
+                        <div  class="imgContainer">
+                            <img [src]="item.img" alt="">
+                        </div>
+    
+                        <span  class="type"> {{item.type}} </span>
+                        <button>  <i class="bx bx-chevron-down"></i> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------- Start Skeleton Loader ------------>
+<skeleton-loader
+    *ngIf="!loading"
+    [type]="'coins'"
+    [count]="count">
+</skeleton-loader>
+<!---------------------------- End Skeleton Loader ------------>

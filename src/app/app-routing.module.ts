@@ -3,14 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { CompanyJobsModule } from './pages/company-jobs/company-jobs.module';
 import { DepartmentModule } from './pages/department/department.module';
 import { ReportsAnalyticsModule } from './pages/reports-analytics/reports-analytics.module';
-import { SliderComponent } from './shared/components/slider/slider.component';
 import { ProfileComponent } from './shared/profile/profile.component';
 
 
 const routes: Routes = [
   // Form controls page
-  { path: 'profile', component: ProfileComponent },
-  { path: 'slider', component: SliderComponent },
+  { path: 'console', component: ProfileComponent },
 
   // Pages without Layout
  

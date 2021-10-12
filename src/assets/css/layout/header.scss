@@ -4,7 +4,6 @@ Top Navbar CSS
 .top-navbar {
    // border-bottom: 1px solid #999;
     position: relative;
-   
    .radius{
     position: absolute;
     display: block;
@@ -12,9 +11,9 @@ Top Navbar CSS
     left: -2px;
     width: 40px;
     height: 40px;
-    background-color: #f2f5fb;
-    border-top: 12px solid #ffffff;
-    border-left: 12px solid #ffffff;
+    background-color: $solitude_color;
+    border-top: 12px solid $white_color;
+    border-left: 12px solid $white_color;
     overflow: hidden;
     border-top-left-radius: 31px;
    }
@@ -54,10 +53,10 @@ Top Navbar CSS
                     right: -7px;
                     display: block;
                     border-radius: 42%;
-                    border: 2px solid #f1f1f1;
+                    border: 2px solid $white_smoke_color;
                     font-size: 0.4rem;
                     line-height: 12px;
-                    background: #dc3545;
+                    background: $amaranth_color;
                     height: 22px;
                     top: -3px;
                     left: 10px;
@@ -200,7 +199,7 @@ Top Navbar CSS
                                 text-align: center;
                                 color: $main-color;
                                 transition: $transition;
-    
+
                                 i {
                                     position: absolute;
                                     left: 0;
@@ -270,11 +269,11 @@ Top Navbar CSS
                             &:nth-child(5) {
                                 .icon {
                                     background: rgba(251, 188, 6, .1);
-                                    color: #fbbc06;
+                                    color: $selective_yellow_color;
                                 }
                                 &:hover {
                                     .icon {
-                                        background-color: #fbbc06;
+                                        background-color: $selective_yellow_color;
                                         color: $white-color;
                                     }
                                 }
@@ -284,7 +283,7 @@ Top Navbar CSS
                     .dropdown-footer {
                         text-align: center;
                         padding: 10px 15px;
-                        border-top: 1px solid #eeeeee;
+                        border-top: 1px solid $whisper_color;
                         
                         .dropdown-item {
                             color: $main-color !important;
@@ -385,7 +384,7 @@ Top Navbar CSS
                     .dropdown-footer {
                         text-align: center;
                         padding: 10px 15px;
-                        border-top: 1px solid #eeeeee;
+                        border-top: 1px solid $whisper_color;
                         
                         .dropdown-item {
                             color: $royal_blue_color !important;
@@ -443,7 +442,6 @@ Top Navbar CSS
                     }
                     .dropdown-body {
                         padding: 10px 5px;
-    
                         .dropdown-item {
                             -ms-flex: 0 0 25%;
                             flex: 0 0 25%;
@@ -460,8 +458,7 @@ Top Navbar CSS
                     .dropdown-footer {
                         text-align: center;
                         padding: 10px 15px;
-                        border-top: 1px solid #eeeeee;
-                        
+                        border-top: 1px solid $whisper_color;
                         .dropdown-item {
                             color: $royal_blue_color !important;
                             padding: 0;
@@ -488,7 +485,7 @@ Top Navbar CSS
                 width: 7px;
                 border-radius: 50%;
                 height: 7px;
-                background: #b6bfe1;
+                background: $perano_color;
                 position: absolute;
                 top: 12px;
                 right: -21px;
@@ -501,7 +498,7 @@ Top Navbar CSS
                 width: 7px;
                 border-radius: 50%;
                 height: 7px;
-                background: #b6bfe1;
+                background: $perano_color;
                 position: absolute;
                 top: 12px;
                 left: -21px;
@@ -541,11 +538,21 @@ Top Navbar CSS
                 .dropdown-menu {
                     padding: 15px 15px 10px;
                     min-width: 230px;
-    
+                    border-radius: 15px;
+                    right: -48px;
+                    .arrow{
+                        position: absolute;
+                        top: -15px;
+                        right: 50px;
+                        width: 20px;
+                        height: 20px;
+                        border-left: 9px solid transparent;
+                        border-right: 11px solid transparent;
+                        border-bottom: 16px solid #fff;
+                    }
                     .dropdown-header {
                         padding: 0;
                         border-bottom: 1px solid #f2f4f9;
-    
                         .figure {
                             position: relative;
     
@@ -575,23 +582,27 @@ Top Navbar CSS
                         }
                         .nav-item {
                             margin-left: 0;
-    
+                            background: #f3f6ff;
+                            border-radius: 8px;
+                            &:last-of-type{
+                                margin-top: 15px;
+                            }    
                             .nav-link {
                                 color: $nero_color;
-                                padding: 5px 15px 5px 38px;
+                                padding: 10px 15px 10px 38px;
                                 position: relative;
-                                font: {
-                                    size: 14px;
-                                    weight: 600;
-                                };
+                                font-weight: bold;
+                                color: #3a4778;
                                 i {
                                     color: $dim_gray_color;
                                     transition: $transition;
                                     position: absolute;
-                                    left: 15px;
-                                    top: 7px;
+                                    left: 12px;
+                                    top: 11px;
+                                    color: #3a4778;
+                                    transform: scaleX(-1);
                                     font: {
-                                        size: 16px;
+                                        size: 23px;
                                     };
                                 }
                                 &.active, &:active {
@@ -610,7 +621,7 @@ Top Navbar CSS
                     .dropdown-footer {
                         margin: 10px -15px 0;
                         padding: 10px 15px 0;
-                        border-top: 1px solid #eeeeee;
+                        border-top: 1px solid $whisper_color;
     
                         ul {
                             padding-left: 0;
@@ -673,26 +684,18 @@ Top Navbar CSS
         }
     }
 
- 
-    .time{  
-        padding-left: 0;
-        .clock{
-        }
-        .date{
-            padding-left: 20px;
-            h1{
-                font-weight: bold;
-                color:#3a4778;
-                font-size: 1rem;
-                margin:0;
-            }
-            p{
-                color:#6372ac;
-                font-size: .5rem;
-                margin:0;
-            }
-        }
-    }
+ /*
+   <div class="d-flex time">
+        <div class="clock">
+            <img src="assets/img/navbar/clock1.png" alt="">
+        </div>
+        <div class="date">
+            <h1> 03:30 PM </h1>
+            <p> Monday, 23 Sep 2021 </p>
+        </div>
+    </div>
+ */
+  
 
 .search{
     margin-right: 25px;

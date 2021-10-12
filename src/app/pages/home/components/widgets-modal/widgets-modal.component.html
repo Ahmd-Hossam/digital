@@ -1,0 +1,34 @@
+<side-panel>
+    <!-- View Result -->
+    <div class="display-contents center-details" modal-content>
+      <div class="modal-body">
+        <div class="title">
+            <img src="../../../../../assets/img/home/widgets/widgetsLines.png" alt="">
+            <span> Control Your Widgets </span>
+            <p>
+                You can add your preferred widgets in the right box to be shown in the home page and re-order them easily.
+                Note that you can add up to 3 widgets. 
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-4  p-0 m-0">
+                <prayers [prayersData]="prayers" [darkMode]="darkMode"></prayers>
+                <weather  [weathers]='weathers' [darkMode]="darkMode"></weather>
+                <coins [coins]="coins"  [darkMode]="darkMode"></coins>
+            </div>
+            <div class="col-md-4 colection  p-0 m-0">
+                <meetings    [meetings]="meetings"       [darkMode]="darkMode"></meetings>
+                <action-list [actionItems]="actionItems" [darkMode]="darkMode"></action-list>
+            </div>
+            <div class="col-md-4 colection p-0 m-0">
+                <div class="addWidget">
+                    <div>
+                        <img  src="../../../../../assets/img/home/widgets/add.png" alt="">
+                        <p> Add your preferred widgets! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</side-panel>

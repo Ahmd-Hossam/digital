@@ -1,9 +1,10 @@
 .action-list{
     background-color: #fff;
     border-radius: 16px;
-    margin-top: 30px;
+    margin-bottom: 30px;
     overflow: hidden;
     padding:5px;
+    min-height: 230px;
     .mainTitle{
         padding:10px;
         width: 100%;
@@ -16,7 +17,7 @@
             img{
                 position: relative;
                 top:-5px;
-                color: #b6bfe1;
+                color: $perano_color;
             }
         }
     }
@@ -32,7 +33,7 @@
             right: 5px;
             top: 5px;
             font-size: 26px;
-            color: #b6bfe1;
+            color: $perano_color;
             cursor: pointer;
         }
        .header{
@@ -49,7 +50,7 @@
               color: #3a4778;
               line-height: 1.4;
               small{
-                color: #b6bfe1;
+                color: $perano_color;
             }
           }
        }
@@ -87,7 +88,6 @@
                 border-radius: 50%;
                 padding:3px;
                 font-size: 18px;
-                cursor: pointer;
             }
             .redoIcon{
                 transform:scaleY(-1);

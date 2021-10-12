@@ -39,16 +39,19 @@ This files table contents are outlined below>>>>>
 @import "./components/buttons.scss";
 
 /** start main components **/
-//@import "./pages/action-list.scss";
-//@import "./pages/birthdays.scss";
-//@import "./pages/feeds.scss";
-//@import "./pages/last-activity.scss";
-//@import "./pages/meetings.scss";
-//@import "./pages/pages.scss";
-//@import "./pages/posts.scss";
-//@import "./pages/trips.scss";
-//@import "./pages/weather.scss";
-
+@import "./pages/birthdays.scss";
+@import "./pages/action-list.scss";
+@import "./pages/prayers.scss";
+@import "./pages//coins.scss";
+@import "./pages//feeds.scss";
+@import "./pages/last-activity.scss";
+@import "./pages/meetings.scss";
+@import "./pages/pages.scss";
+@import "./pages/trips.scss";
+@import "./pages/posts.scss";
+@import "./pages/comments.scss";
+@import "./pages/weather.scss";
+@import "./components/skeleton.scss";
 
 
 
@@ -61,7 +64,7 @@ Main Content CSS
   transition: $transition;
   overflow: hidden;
   min-height: 100vh;
-  background:#f2f5fb;
+  background:$solitude_color;
   margin-top:20px;
   padding: {
     right: 30px;
@@ -722,7 +725,7 @@ Main Content CSS
         bottom: 0;
         width: 1px;
         height: 150%;
-        background-color: #eeeeee;
+        background-color: $whisper_color;
       }
 
       i {
@@ -836,8 +839,8 @@ Main Content CSS
         vertical-align: middle;
         white-space: nowrap;
         border: {
-          bottom: 1px solid #eeeeee;
-          top: 1px solid #eeeeee;
+          bottom: 1px solid $whisper_color;
+          top: 1px solid $whisper_color;
         }
         color: $nero_color;
         font: {
@@ -903,7 +906,7 @@ Main Content CSS
 .browser-statistics-box {
   .box {
     padding-bottom: 15px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid $whisper_color;
     margin-bottom: 15px;
 
     &:last-child {
@@ -1201,7 +1204,7 @@ Main Content CSS
 }
 
 .widget-todo-list {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid $whisper_color;
   padding-top: 18px !important;
   margin: {
     left: -25px;
@@ -1710,7 +1713,7 @@ Main Content CSS
 .social-marketing-box {
   .list {
     position: relative;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid $whisper_color;
     margin-bottom: 12.5px;
     padding: {
       bottom: 12.5px;
