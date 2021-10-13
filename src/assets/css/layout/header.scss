@@ -93,7 +93,7 @@ Top Navbar CSS
                 .dropdown-menu {
                     max-width: 280px;
                     position: absolute;
-                    right: 0;
+                    right: -80px;
                     left: auto;
                     border-radius: 2px;
                     margin-top: 20px;
@@ -104,7 +104,6 @@ Top Navbar CSS
                     visibility: hidden;
                     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
                     background-color: $white-color;
-    
                     &.show {
                         margin-top: 10px;
                         opacity: 1;
@@ -143,7 +142,6 @@ Top Navbar CSS
                         left: 50%;
                         right: auto;
                         transform: translateX(-50%);
-
                         .dropdown-item {
                             padding: 5px 20px;
                             font-size: 14.5px;
@@ -157,145 +155,114 @@ Top Navbar CSS
             }
             &.notification-box {
                 .dropdown-menu {
-                    width: 350px;
-                    max-width: 350px;
-                    border-radius: 5px 5px 0 0;
+                    width: 373px;
+                    max-width: 373px;
+                    border-radius:15px;
                     padding: 0;
-    
+                    &::after{
+                        content:'';
+                        display: block;
+                        position: absolute;
+                        top: -15px;
+                        right: 88px;
+                        width: 20px;
+                        height: 20px;
+                        border-left: 9px solid transparent;
+                        border-right: 11px solid transparent;
+                        border-bottom: 16px solid #fff;
+                    }
                     .dropdown-header {
                         border-radius: 5px 5px 0 0;
-                        background-color: $main-color;
-                        color: $white-color;
-                        padding: {
-                            left: 15px;
-                            right: 15px;
-                            top: 9px;
-                            bottom: 7px;
-                        };
-                        span {
-                            font: {
-                                size: 13px;
-                                weight: 600;
-                            };
-                            &.mark-all-btn {
-                                cursor: pointer;
-                            }
-                        }
+                        //background-color: $main-color;
+                        color: #3a4778;
+                        padding:9px 15px 7px 15px;
+                        .title{
+                            font-size: 18px;
+                            font-weight: bold;
+                        } 
                     }
                     .dropdown-body {
-                        padding: {
-                            top: 10px;
-                            bottom: 10px;
-                        };
-                        .dropdown-item {
-                            padding: 7px 15px;
-    
-                            .icon {
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50%;
-                                position: relative;
-                                background: $alice_blue_color;
-                                text-align: center;
-                                color: $main-color;
-                                transition: $transition;
-
-                                i {
-                                    position: absolute;
-                                    left: 0;
-                                    right: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                }
-                            }
-                            .content {
-                                padding-left: 15px;
-    
-                                span {
-                                    color: $nero_color;
-                                    margin-bottom: 1px;
-                                    font: {
-                                        size: 14.5px;
-                                        weight: 600;
-                                    };
-                                }
-                                p {
-                                    font-size: 12px;
-                                    color: $dim_gray_color;
-                                }
-                            }
-                            &:hover {
-                                .icon {
-                                    background-color: $main-color;
-                                    color: $white-color;
-                                }
-                            }
-                            &:nth-child(2) {
-                                .icon {
-                                    background: rgba(114, 124, 245, .1);
-                                    color: $Medium_slate_blue_color;
-                                }
-                                &:hover {
-                                    .icon {
-                                        background-color: $Medium_slate_blue_color;
-                                        color: $white-color;
-                                    }
-                                }
-                            }
-                            &:nth-child(3) {
-                                .icon {
-                                    background: rgba(16, 183, 89, .1);
-                                    color: $pigment_green_color;
-                                }
-                                &:hover {
-                                    .icon {
-                                        background-color: $pigment_green_color;
-                                        color: $white-color;
-                                    }
-                                }
-                            }
-                            &:nth-child(4) {
-                                .icon {
-                                    background: rgba(255, 51, 102, .1);
-                                    color: $danger-color;
-                                }
-                                &:hover {
-                                    .icon {
-                                        background-color: $danger-color;
-                                        color: $white-color;
-                                    }
-                                }
-                            }
-                            &:nth-child(5) {
-                                .icon {
-                                    background: rgba(251, 188, 6, .1);
-                                    color: $selective_yellow_color;
-                                }
-                                &:hover {
-                                    .icon {
-                                        background-color: $selective_yellow_color;
-                                        color: $white-color;
-                                    }
-                                }
-                            }
+                        padding: 10px;
+                        .day{
+                            padding:5px;
+                            background: #f3f6ff;
+                            color:#b6bfe1;
+                            text-align: center;
+                            border-radius: 5px;
                         }
-                    }
-                    .dropdown-footer {
-                        text-align: center;
-                        padding: 10px 15px;
-                        border-top: 1px solid $whisper_color;
-                        
-                        .dropdown-item {
-                            color: $main-color !important;
-                            padding: 0;
+                        .notifications{
+                            margin-top: 20px;
                             position: relative;
-                            display: inline-block;
-                            width: auto;
-                            background-color: transparent !important;
-                            font: {
-                                size: 14px;
-                                weight: 600;
-                            };
+                            padding-bottom: 10px;
+                           // padding:16px 16px 0 16px;
+                            border-bottom: 2px solid #e6e8f442;
+                            .imgContainer{
+                                position: relative;
+                                width:40px !important;
+                                height: 40px;
+                                border-radius: 50%;
+                                img{
+                                    width:100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                }
+                                .activeLastSeen{
+                                    position: absolute;
+                                    top: 78%;
+                                    right: 2px;
+                                    display: block;
+                                    width:10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                }
+                                .active{
+                                    background: #b5eb47
+                                }
+                                .unknown{
+                                    background: #b6bfe1;
+                                }
+                                .lastSeen{
+                                    background:#ef7070;
+                                }
+
+                            }
+                            .info{
+                                padding-top: 5px;
+                                padding-left:16px;
+                                .name{
+                                    font-weight: bold;
+                                    font-size: 1.1rem;
+                                    color: #3a4778;
+                                }
+                                .time{
+                                    position: absolute;
+                                    color: #c4c7cf94;
+                                    top: 3px;
+                                    right: 3px;
+                                    cursor: pointer;
+                                    .dot{
+                                        width:7px;
+                                        height: 7px;
+                                        border-radius: 50%;
+                                        background: #03a3ee;
+                                        display: inline-block;
+                                        position: relative;
+                                        top:-1px;
+                                        right: 4px;
+                                    }
+                                }
+
+                                .content{
+                                    position: relative;
+                                    top:-6px;
+                                    font-size: 14px;
+                                    color: #b5c1df;
+                                    .action{
+                                        color:#03a3ee;
+                                        text-transform: capitalize;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -304,7 +271,6 @@ Top Navbar CSS
                 font-size: 20px;
                 position: relative;
                 margin-right: 7px;
-    
                 i {
                     position: relative;
                     top: 3px;
@@ -313,70 +279,100 @@ Top Navbar CSS
             }
             &.message-box {
                 .dropdown-menu {
-                    width: 350px;
-                    max-width: 350px;
-                    border-radius: 5px 5px 0 0;
+                    width: 373px;
+                    max-width: 373px;
+                    border-radius: 16px;
                     padding: 0;
-    
+                    right: -80px;
+                    &::after{
+                        content:'';
+                        display: block;
+                        position: absolute;
+                        top: -15px;
+                        right: 88px;
+                        width: 20px;
+                        height: 20px;
+                        border-left: 9px solid transparent;
+                        border-right: 11px solid transparent;
+                        border-bottom: 16px solid #fff;
+                    }
                     .dropdown-header {
                         border-radius: 5px 5px 0 0;
-                        background-color: $royal_blue_color;
-                        color: $white-color;
-                        padding: {
-                            left: 15px;
-                            right: 15px;
-                            top: 9px;
-                            bottom: 7px;
-                        };
-                        span {
-                            font: {
-                                size: 13px;
-                                weight: 600;
-                            };
-                            &.clear-all-btn {
-                                cursor: pointer;
-                            }
-                        }
+                        font-weight: bold;
+                        color: #3a4778;
+                        font-size: 18px;
+                        padding: 9px 15px 7px 15px;
                     }
                     .dropdown-body {
-                        padding: {
-                            top: 10px;
-                            bottom: 10px;
-                        };
-                        .dropdown-item {
-                            padding: 7px 15px;
-    
-                            .figure {
-                                img {
-                                    width: 35px;
-                                    height: 35px;
+                        padding:16px;
+                        .messages{
+                            margin-top: 20px;
+                            position: relative;
+                            padding-bottom: 10px;
+                           // padding:16px 16px 0 16px;
+                            border-bottom: 2px solid #e6e8f442;
+                            .imgContainer{
+                                position: relative;
+                                width:40px !important;
+                                height: 40px;
+                                border-radius: 50%;
+                                img{
+                                    width:100%;
+                                    height: 100%;
+                                    border-radius: 50%;
                                 }
+                                .activeLastSeen{
+                                    position: absolute;
+                                    top: 78%;
+                                    right: 2px;
+                                    display: block;
+                                    width:10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                  
+                                }
+                                .active{
+                                    background: #b5eb47
+                                }
+                                .unknown{
+                                    background: #b6bfe1;
+                                }
+                                .lastSeen{
+                                    background:#ef7070;
+                                }
+
                             }
-                            .content {
-                                width: 285px;
-                                padding-left: 12px;
-    
-                                span {
-                                    color: $nero_color;
-                                    margin-bottom: 2px;
-                                    font: {
-                                        size: 14.5px;
-                                        weight: 600;
-                                    };
+                            .info{
+                                padding-top: 5px;
+                                padding-left:16px;
+                                .name{
+                                    font-weight: bold;
+                                    font-size: 1.1rem;
+                                    color: #3a4778;
                                 }
-                                .time-text {
-                                    font-size: 13px;
-                                    color: $dim_gray_color;
+                                .time{
+                                    position: absolute;
+                                    color: #c4c7cf94;
+                                    top: 3px;
+                                    right: 3px;
+                                    cursor: pointer;
+                                    .dot{
+                                        width:7px;
+                                        height: 7px;
+                                        border-radius: 50%;
+                                        background: #03a3ee;
+                                        display: inline-block;
+                                        position: relative;
+                                        top:-1px;
+                                        right: 4px;
+                                    }
                                 }
-                                .sub-text {
-                                    font-size: 12.5px;
-                                    color: $dim_gray_color;
-                                }
-                            }
-                            &:hover {
-                                .icon {
-                                    background-color: $main-color;
-                                    color: $white-color;
+
+                                .content{
+                                    position: relative;
+                                    top:-6px;
+                                    font-size: 14px;
+                                    color: #b5c1df;
                                 }
                             }
                         }
@@ -413,8 +409,8 @@ Top Navbar CSS
             }
             &.apps-box {
                 .dropdown-menu {
-                    width: 350px;
-                    max-width: 350px;
+                    width: 373px;
+                    max-width: 373px;
                     border-radius: 5px 5px 0 0;
                     padding: 0;
                     left: 0;
@@ -798,4 +794,10 @@ Top Navbar CSS
     100% {
         box-shadow: 0 0 0 0 rgba(41, 98, 255, 0);
     }
+}
+
+
+//border none
+.border-none{
+    border-bottom:none !important;
 }

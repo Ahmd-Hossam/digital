@@ -8,26 +8,38 @@ import { PostsService } from '../../services/posts.service';
 })
 export class PostsComponent implements OnInit {
   posts=[];
+  postImgs:any;
+  
   loading:boolean=false;
   showParagraph:boolean=false;
   toggleClass:boolean=false;
   count:10;
+
+  
   constructor(private postsService:PostsService) { }
 
   ngOnInit() {
     this.getPosts();
+
     setTimeout(()=>{
       this.loading=true
-    },20000)
+    },2000)
   }
 
+  //send imgs to slider popup
+  sendImgs(imgs){
+    this.postImgs=imgs
+  }
+
+
+  //see more and see less comment
   seeMore(){
     this.showParagraph=true;
   }
-
   seeLess(){
     this.showParagraph=false;
   }
+
 
   //get all posts
   getPosts(){

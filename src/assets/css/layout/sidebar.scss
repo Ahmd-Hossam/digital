@@ -7,7 +7,7 @@ Sidemenu CSS
     top: 0;
     height: 100%;
     width:90px;
-    z-index: 2000;
+    z-index: 999;
     transition: $transition;
     background:$white_color;
     .sidemenu-header{

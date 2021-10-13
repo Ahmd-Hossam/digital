@@ -1,5 +1,7 @@
 <div  class="posts" *ngIf="loading">
     <div class="post" *ngFor="let post of posts; index as i"   [ngClass]="{'specialPost' : post.special && loading}">
+       
+
         <div class="header d-flex">
             <div  class="imgContainer">
                 <img [src]="post.img" alt="">
@@ -36,8 +38,11 @@
             </div>
         </div>
 
+
         <div class="body">
-            <div class="imgContainer">
+            <!-- open slider modal -->
+            <div class="imgContainer" (click)="sendImgs(post.postImgs)" data-toggle="modal" data-target="#sliderModal">
+
                 <!-- if not three imgs -->
                 <div class="row" *ngIf='post.postImgs.length != 3'>
                     <div   
@@ -97,6 +102,10 @@
         </div>
     </div> 
 </div>
+
+
+<!-- Start  Slider Imgs  -->
+<app-slider-modal [sliderImgs]="postImgs"></app-slider-modal>
 
 
 <!------------ Start Skeleton Loader --------->

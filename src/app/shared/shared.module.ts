@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { CountdownModule } from 'ngx-countdown';
-import { ProfileComponent } from './profile/profile.component';
+import { ConsoleComponent} from './console/console.component'
 import { BirthdaysComponent } from '././components/birthdays/birthdays.component'
 
 // Import ng-circle-progress
@@ -20,7 +20,8 @@ import { CoinsComponent } from './components/coins/coins.component';
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
 import { SkeletonLoaderComponent } from './plugins/skeleton-loader/skeleton-loader.component';
 import { PrayersComponent } from './components/prayers/prayers.component';
-import { TestSkeletonComponent } from './plugins/test-skeleton/test-skeleton.component';
+import { SliderModalComponent } from './plugins/slider-modal/slider-modal.component';
+import { CarouselComponent } from './plugins/carousel/carousel.component';
 
 
 @NgModule({
@@ -69,10 +70,11 @@ import { TestSkeletonComponent } from './plugins/test-skeleton/test-skeleton.com
     SidePanelComponent,
     SkeletonLoaderComponent,
     PrayersComponent,
-    TestSkeletonComponent
+    SliderModalComponent,
+    CarouselComponent
     ],
   declarations: [
-    ProfileComponent,
+    ConsoleComponent,
     BirthdaysComponent,
     ActionListComponent,
     PagesComponent,
@@ -84,7 +86,8 @@ import { TestSkeletonComponent } from './plugins/test-skeleton/test-skeleton.com
     SidePanelComponent,
     SkeletonLoaderComponent,
     PrayersComponent,
-    TestSkeletonComponent
+    SliderModalComponent,
+    CarouselComponent
   ],
 })
 export class SharedModule {}

@@ -33,25 +33,27 @@ This files table contents are outlined below>>>>>
 @import "./base/default.scss";
 @import "./layout/sidebar.scss";
 @import "./layout/header.scss";
-@import "./components/search-bar.scss";
-@import "./components/modal.scss";
-@import "./components/checkbox.scss";
-@import "./components/buttons.scss";
+@import "./plugins/search-bar.scss";
+@import "./plugins/modal.scss";
+@import "./plugins/checkbox.scss";
+@import "./plugins/buttons.scss";
+@import "./plugins/skeleton.scss";
+
 
 /** start main components **/
-@import "./pages/birthdays.scss";
-@import "./pages/action-list.scss";
-@import "./pages/prayers.scss";
-@import "./pages//coins.scss";
-@import "./pages//feeds.scss";
-@import "./pages/last-activity.scss";
-@import "./pages/meetings.scss";
-@import "./pages/pages.scss";
-@import "./pages/trips.scss";
-@import "./pages/posts.scss";
-@import "./pages/comments.scss";
-@import "./pages/weather.scss";
-@import "./components/skeleton.scss";
+@import "./components/birthdays.scss";
+@import "./components/action-list.scss";
+@import "./components/prayers.scss";
+@import "./components/coins.scss";
+@import "./components/feeds.scss";
+@import "./components/last-activity.scss";
+@import "./components/meetings.scss";
+@import "./components/pages.scss";
+@import "./components/trips.scss";
+@import "./components/posts.scss";
+@import "./components/comments.scss";
+@import "./components/weather.scss";
+
 
 
 

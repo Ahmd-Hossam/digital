@@ -7,7 +7,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { PostsComponent } from './components/posts/posts.component'
 import { CommentsComponent } from './components/comments/comments.component';
 import { WidgetsModalComponent } from './components/widgets-modal/widgets-modal.component';
-import { LatestActivityComponent } from './components/latest-activity/latest-activity.component'
+import { LatestActivityComponent } from './components/latest-activity/latest-activity.component';
 
 
 @NgModule({

@@ -1,0 +1,67 @@
+.sliderImg{
+    height: 400px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+::ng-deep .firstArrow .carousel-control-prev{
+    display:none;
+}
+
+::ng-deep .lastArrow .last .carousel-control-next {
+    display: none;
+}
+
+::ng-deep .hideAll  .carousel-control-prev{
+    display: none;
+}
+::ng-deep .hideAll  .carousel-control-next{
+    display: none;
+}
+
+::ng-deep .modal-content .modal-header{
+    padding: 13px 15px 13px 29px;
+    border: 0 !important;
+    .close {
+        right: 0 !important;
+        top:0 !important; 
+        color: #999;
+    }
+}
+
+
+::ng-deep .modal-body {
+    padding: 0 !important;
+}
+
+::ng-deep .carousel-inner {
+    border-radius: 23px;
+}
+
+
+
+::ng-deep .carousel-control-prev{
+    position: absolute;
+    left: -200px;
+}
+
+::ng-deep .carousel-control-next{
+    position: absolute;
+    right: -200px;
+}
+
+
+::ng-deep .prevIcon, .nextIcon{
+    font-size: 80px;
+}
+
+
+::ng-deep .carousel-item{
+    padding:5px;
+    background: #fff;
+    img{
+        height: 400px;
+        object-fit: cover;
+    }
+}

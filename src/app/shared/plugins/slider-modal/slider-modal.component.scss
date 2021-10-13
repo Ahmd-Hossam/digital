@@ -1,0 +1,46 @@
+
+.modal-content .modal-header{
+    padding: 13px 15px 13px 29px;
+    border: 0 !important;
+    .close {
+        right: 0 !important;
+        top:0 !important; 
+        color: #999;
+    }
+}
+
+
+.modal-body {
+    padding: 0 !important;
+}
+
+.carousel-inner {
+    border-radius: 23px;
+}
+
+
+
+.carousel-control-prev{
+    position: absolute;
+    left: -200px;
+}
+
+.carousel-control-next{
+    position: absolute;
+    right: -200px;
+}
+
+
+.prevIcon, .nextIcon{
+    font-size: 80px;
+}
+
+
+.carousel-item{
+    padding:5px;
+    background: #fff;
+    img{
+        height: 400px;
+        object-fit: cover;
+    }
+}

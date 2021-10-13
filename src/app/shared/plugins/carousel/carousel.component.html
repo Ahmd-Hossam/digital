@@ -1,0 +1,9 @@
+<div class='container-fluid p-0 m-0'>    
+    <div class='col-12 p-0 m-0' >  
+        <ngb-carousel  [ngClass]="{'hideAll':sliderImgs.length < 2}">  
+            <ng-template  ngbSlide *ngFor="let postImg of sliderImgs; index as i; first as first " >  
+                <img class="sliderImg" [src]="postImg.img" alt="Delhi Metro">    
+            </ng-template>
+        </ngb-carousel>  
+    </div>  
+</div>  
